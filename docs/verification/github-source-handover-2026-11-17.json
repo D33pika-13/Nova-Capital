@@ -26,5 +26,7 @@
   "githubInvitationAccepted": false,
   "ownershipTransferred": false,
   "providerAccessTransferred": false,
-  "identityRequestWhatsAppDelivered": true
+  "identityRequestWhatsAppDelivered": true,
+  "repositoryHandoverWhatsAppDelivered": true,
+  "repositoryHandoverWhatsAppTime": "2026-11-17 18:27 Asia/Kolkata"
 }
