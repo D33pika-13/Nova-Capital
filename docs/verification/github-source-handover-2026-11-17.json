@@ -1,0 +1,30 @@
+{
+  "observedAtUtc": "2026-11-17T12:55:00Z",
+  "repository": "https://github.com/sunny-chandel/nova-capital-website",
+  "visibility": "PRIVATE",
+  "technicalOwner": "sunny-chandel",
+  "intendedOwner": "Deepika",
+  "initialSourceCommit": "b868ded58c999e39d83be833dbdb04d8f7cdcc8b",
+  "remoteCommitMatched": true,
+  "initialRemoteFileCount": 490,
+  "trackedEnvironmentFiles": [
+    ".env.example"
+  ],
+  "prePublicationScan": {
+    "checkedAt": "2026-11-17T12:54:58.608Z",
+    "files": 490,
+    "bytes": 2567157,
+    "privateValueMatches": [],
+    "excludedEnvironmentFiles": [
+      ".env.example"
+    ],
+    "credentialValuesPrinted": false
+  },
+  "remoteActionsRuns": 0,
+  "featureChecksRerun": false,
+  "productionDeployed": false,
+  "githubInvitationAccepted": false,
+  "ownershipTransferred": false,
+  "providerAccessTransferred": false,
+  "identityRequestWhatsAppDelivered": true
+}

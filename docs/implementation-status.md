@@ -2,6 +2,13 @@
 
 Updated: 14 November 2026. Deepika’s Education and follow-up changes are implemented, locally tested and staging-verified on the replacement URL in `deployment.md`. Tester acceptance and production release remain separate.
 
+## Private GitHub owner handover — 17 November 2026
+
+- Created and pushed the private `sunny-chandel/nova-capital-website` repository using the CLI account matching the user’s open GitHub profile. Added an owner-first README, integration/operations guide, private credential checklist and explicit ownership state. The provider inventory was read from the existing staging selector configuration without printing credential values.
+- Initialized local Git, added the private origin and verified the initial source commit against GitHub. Reviewed the candidate tree: only `.env.example` is tracked; private app/operator/test environment files, keys/backups and raw screenshots are excluded. Exact existing private-value and token/private-key scans found no matches; staged whitespace checks pass. Initial remote tree: 490 files. No application behavior changed and no new full feature suite or staging run is claimed.
+- Initial push deliberately skips CI; workflow source is included, but no remote workflow ran or passed. Existing dated local/staging evidence remains historical. No new paid resource or production deployment was provisioned.
+- Asked Deepika/dipu on WhatsApp for her GitHub identity and provider-invitation email, with delivery observed. Invitation/accepted access, ownership transfer, provider-account acceptance and private credential delivery remain pending. See `ownership-handover.md`; a private repo under Sunny is not yet a completed owner transfer.
+
 ## Education and follow-up delivery — 14 November 2026
 
 - Added public Education navigation/page, separate Premium Webinars and Individual Mentorship Sessions cards, preselected public request form, required contact/service fields, optional message, explicit storage/contact consent and the requested post-commit confirmation. Guests and existing clients can submit without a new account. Existing design tokens/panels and responsive layout are reused.
