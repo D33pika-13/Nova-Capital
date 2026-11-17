@@ -50,7 +50,7 @@ cp .env.example .env.local
 pnpm dev
 ```
 
-Open http://127.0.0.1:3000. Default settings explicitly run a public-shell development environment. No fake login or financial data is supplied. Protected services remain unavailable until configured and implemented. See `docs/implementation-status.md` for actual feature/test status.
+Open http://127.0.0.1:3000. Default settings run the public-shell development profile without creating usable login accounts. Protected services are implemented, but remain disabled until their environment and providers are connected. See `docs/implementation-status.md` for actual feature/test status.
 
 On this Mac, the separately verified staging runtime can be used without replacing the shared Codex runtime:
 
