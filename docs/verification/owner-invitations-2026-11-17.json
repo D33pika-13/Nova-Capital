@@ -1,0 +1,42 @@
+{
+  "observedAtUtc": "2026-11-17T17:08:00Z",
+  "githubRecipient": {
+    "login": "D33pika-13",
+    "id": 177202704
+  },
+  "repository": "sunny-chandel/nova-capital-website",
+  "private": true,
+  "githubInvitation": {
+    "id": 344454179,
+    "permission": "write",
+    "htmlUrl": "https://github.com/sunny-chandel/nova-capital-website/invitations",
+    "accepted": false
+  },
+  "githubTransfer": {
+    "initiated": true,
+    "settingsShowsTransferTo": "D33pika-13",
+    "accepted": false,
+    "currentOwner": "sunny-chandel"
+  },
+  "supabase": {
+    "organization": "Project Website Staging",
+    "projectCount": 1,
+    "role": "Owner",
+    "explicitUserConfirmation": true,
+    "invitationSent": true,
+    "visibleState": "Invited",
+    "accepted": false
+  },
+  "mailtrap": {
+    "freePlanBlocksExtraUser": true,
+    "upgradeSelected": false,
+    "ownerFreeSandboxRequested": true,
+    "smtpChanged": false
+  },
+  "whatsapp": {
+    "githubInstructionsDelivered": "22:34 Asia/Kolkata",
+    "providerInstructionsDelivered": "22:38 Asia/Kolkata"
+  },
+  "productionDeployed": false,
+  "credentialsCommitted": false
+}

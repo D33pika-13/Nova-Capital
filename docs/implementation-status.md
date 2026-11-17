@@ -2,6 +2,13 @@
 
 Updated: 14 November 2026. Deepika’s Education and follow-up changes are implemented, locally tested and staging-verified on the replacement URL in `deployment.md`. Tester acceptance and production release remain separate.
 
+## Owner invitations — 17 November 2026
+
+- User confirmed GitHub `D33pika-13` and the provider invitation email. Verified the GitHub account and sent write-access invitation `344454179` using the authenticated `sunny-chandel` account. Initiated transfer to `D33pika-13`; GitHub settings explicitly show transfer in progress. The repo remains private under Sunny until acceptance is observed. No acceptance or completed transfer is claimed.
+- Reviewed the dedicated Supabase Free organization (only the website staging project). Prepared the Owner invitation, obtained the user’s explicit confirmation of its full permissions, then sent it. Dashboard shows recipient “Invited” with role Owner and success confirmation. No project change, key rotation or removal of existing owner access occurred.
+- Mailtrap Free user management blocks another user and offers a paid upgrade. No upgrade was selected. Asked Deepika on WhatsApp to create her own free Email Sandbox, followed by private SMTP migration; this remains pending, and existing SMTP/Auth configuration is unchanged.
+- Delivered GitHub acceptance and Supabase/free-Mailtrap instructions on WhatsApp. Updated the ownership/integration handover to distinguish sent invitations, acceptance, transfer and future credential cutover. No application code or production deployment changed.
+
 ## Private GitHub owner handover — 17 November 2026
 
 - Created and pushed the private `sunny-chandel/nova-capital-website` repository using the CLI account matching the user’s open GitHub profile. Added an owner-first README, integration/operations guide, private credential checklist and explicit ownership state. The provider inventory was read from the existing staging selector configuration without printing credential values.
