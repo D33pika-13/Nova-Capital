@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-11-11T04:02:54.498371+00:00",
+  "scope": "Owned temporary PostgreSQL 17.11 on local macOS ARM64; short fixed service/database contention check, not HTTP, sustained traffic, staging capacity or an SLO",
+  "metrics": {
+    "event": "native.load_result",
+    "workers": 8,
+    "operations": 96,
+    "poolMax": 4,
+    "peakConnections": 4,
+    "peakWaiting": 8,
+    "elapsedMs": 162.2,
+    "latency": {
+      "duplicateWrite": {
+        "count": 24,
+        "p50Ms": 10.16,
+        "p95Ms": 43.89,
+        "maxMs": 46.88
+      },
+      "snapshot": {
+        "count": 24,
+        "p50Ms": 9.49,
+        "p95Ms": 46.53,
+        "maxMs": 50.48
+      },
+      "isolatedRead": {
+        "count": 24,
+        "p50Ms": 13.82,
+        "p95Ms": 53.23,
+        "maxMs": 54.03
+      },
+      "sharedLimit": {
+        "count": 24,
+        "p50Ms": 3.46,
+        "p95Ms": 35.27,
+        "maxMs": 35.97
+      }
+    },
+    "expectedLimitDenials": 17
+  },
+  "invariants": [
+    "24 idempotent duplicate investment pairs create 24 investments",
+    "24 snapshots retain exact values",
+    "24 client reads and direct cross-client queries retain isolation",
+    "24 shared-limit attempts allow seven and deny seventeen",
+    "48 business rows have one audit each and 48 completed submission markers",
+    "All four retained pool connections have cleared subject/assurance context"
+  ],
+  "cleanup": "Runner reported temporary cluster, credentials and generated TLS keys removed"
+}

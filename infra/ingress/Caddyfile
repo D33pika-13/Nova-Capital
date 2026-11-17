@@ -1,0 +1,46 @@
+{
+	admin off
+	auto_https off
+	persist_config off
+	log default {
+		output discard
+	}
+	servers {
+		trusted_proxies static 127.0.0.1/32
+		trusted_proxies_strict
+		client_ip_headers CF-Connecting-IP
+		max_header_size 32KB
+		timeouts {
+			read_header 10s
+			read_body 120s
+			write 120s
+			idle 60s
+		}
+	}
+}
+
+:{$INGRESS_LISTEN_PORT} {
+	bind 127.0.0.1
+	route {
+		@wrong_host not host {$INGRESS_PUBLIC_HOST}
+		respond @wrong_host "Request host is not allowed." 421
+		@bad_context expression !{http.request.header.CF-Connecting-IP}.matches('^[0-9A-Fa-f:.]+$')
+		respond @bad_context "Verified network context is required." 503
+		@local_context client_ip 127.0.0.0/8 ::1 ::/128 0.0.0.0/8
+		respond @local_context "Verified network context is required." 503
+		@insecure not header X-Forwarded-Proto https
+		respond @insecure "HTTPS ingress is required." 400
+		reverse_proxy 127.0.0.1:{$INGRESS_UPSTREAM_PORT} {
+			header_up Host {$INGRESS_PUBLIC_HOST}
+			header_up -Forwarded
+			header_up -X-Forwarded-Host
+			header_up X-Forwarded-Proto https
+			header_up X-Forwarded-For {client_ip}
+			header_up X-Real-IP {client_ip}
+			transport http {
+				dial_timeout 5s
+				response_header_timeout 90s
+			}
+		}
+	}
+}

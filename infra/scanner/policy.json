@@ -1,0 +1,19 @@
+{
+  "clamd": {
+    "HeuristicAlerts": "yes",
+    "AlertExceedsMax": "yes",
+    "MaxScanSize": "128M",
+    "MaxFileSize": "32M",
+    "StreamMaxLength": "64M",
+    "MaxRecursion": "8",
+    "MaxFiles": "256",
+    "MaxThreads": "2",
+    "MaxQueue": "8",
+    "ConcurrentDatabaseReload": "no",
+    "SelfCheck": "60"
+  },
+  "freshclam": {
+    "TestDatabases": "yes"
+  },
+  "updateChecks": "12"
+}

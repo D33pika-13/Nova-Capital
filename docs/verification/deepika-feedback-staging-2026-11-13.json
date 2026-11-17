@@ -1,0 +1,132 @@
+{
+  "url": "https://classics-shoot-white-for.trycloudflare.com",
+  "observedAtUtc": "2026-11-13T17:04:27.903Z",
+  "checks": {
+    "health": 200,
+    "publicFaqQuestionsRemoved": true,
+    "mayaPublicLauncher": true,
+    "anonymousWithdrawalsDenied": 401,
+    "adminPasswordLogin": "/mfa",
+    "adminMfa": "/admin",
+    "reportsAdminSessionExplained": true,
+    "clientALogin": 200,
+    "clientBLogin": 200,
+    "adminWithdrawalCreate": 201,
+    "withdrawalRetryDeduplicated": "ff2360b0-7b05-45bc-b3a4-338f873447cf",
+    "withdrawalCorrection": 201,
+    "withdrawalInternationalCurrency": 201,
+    "invalidWithdrawalRejected": 422,
+    "futureWithdrawalRejected": 422,
+    "clientWithdrawalWriteDenied": 403,
+    "ownWithdrawalExactAmountAndDate": true,
+    "withdrawalHistoryPreserved": true,
+    "otherClientWithdrawalIsolation": 0,
+    "withdrawalIdentitySpoofRejected": 422,
+    "internationalInvestment": 201,
+    "internationalSnapshot": 201,
+    "currenciesSeparated": true,
+    "manualBadgeRemoved": true,
+    "clientSecurityAndWithdrawalNavigation": true,
+    "clientReportsStayInClientFlow": true,
+    "ownReportDownloadIssued": 303,
+    "ownReportDownload": 200,
+    "reportDownloadHashMatches": "183e5b3d9a087cb027ec17a7c9f45a2691c777f4cdc17d811434be264d7d6c14",
+    "otherClientReportDenied": 404,
+    "securityClientCreatedByAdmin": 201,
+    "withdrawalAtomicAudit": 1,
+    "newMigrationRecorded": 1,
+    "securityClientInitialLogin": 200,
+    "clientMfaSetup": 200,
+    "clientMfaInvalidCodeDenied": 400,
+    "clientMfaVerified": "/portal/security",
+    "clientSecurityMfaEnabledAndPasswordOption": true,
+    "enrolledLoginRequiresMfa": "/mfa",
+    "enrolledAal1PortfolioDenied": 403,
+    "enrolledAal1ReportsDenied": 403,
+    "enrolledAal1WithdrawalsDenied": 403,
+    "enrolledAal1PasswordChangeDenied": 403,
+    "enrolledAal1RecoveryPasswordBypassDenied": 403,
+    "clientPasswordChange": 200,
+    "passwordChangeSignsOut": 401,
+    "oldPasswordDenied": 401,
+    "newPasswordAcceptedWithMfa": "/mfa",
+    "newPasswordMfaVerified": 200,
+    "mfaClientOwnPortfolio": 200,
+    "mfaClientStillCannotAccessAdmin": 403,
+    "mfaClientCannotDownloadOtherReport": 404
+  },
+  "productionDeployed": false,
+  "syntheticSecurityFixture": {
+    "email": "client-security-20261113@nova-staging.example.test",
+    "profileId": "b86e20b6-bcc2-4c9b-af7c-4274d4773914",
+    "onboarding": "Explicit Auth-admin identity and owner mapping fixture; profile created through app admin API. Not a client invitation test."
+  },
+  "sharedTesterCredentialsChanged": false,
+  "migration": "20261113000100_withdrawal_history.sql",
+  "testCount": 52,
+  "finalArtifact": {
+    "buildId": "34rxaLmnm4ntdwAJGoBUO",
+    "observedAtUtc": "2026-11-13T17:12:04.014Z",
+    "smoke": {
+      "health": true,
+      "portfolioCurrencies": true,
+      "responsiveWithdrawalWrapper": true,
+      "clientReports": true,
+      "clientSecurity": true,
+      "adminMillisecondWithdrawalInput": true,
+      "adminReportsMismatch": true,
+      "faqAndMaya": true
+    },
+    "jobs": {
+      "app": {
+        "state": "running",
+        "pid": 46269
+      },
+      "scanner": {
+        "state": "running",
+        "pid": 32770
+      },
+      "tunnel": {
+        "state": "running",
+        "pid": 32773
+      }
+    }
+  },
+  "localVerification": {
+    "standardTests": 938,
+    "testFiles": 78,
+    "nativePostgresTests": 25,
+    "lint": true,
+    "typecheck": true,
+    "productionBuild": true,
+    "pdfPackage": true,
+    "imagePackage": true,
+    "startupPackage": true,
+    "shutdownPackage": true,
+    "canaryBrowserSecretScan": true,
+    "format": true
+  },
+  "browserVerification": {
+    "clientReportsNavigation": true,
+    "clientSecurityControls": true,
+    "mayaReplyAndClientReportsLink": true,
+    "faqRemovedQuestionsAbsent": true,
+    "mobileFaqWidth": {
+      "viewport": 375,
+      "document": 375
+    },
+    "mobileWithdrawalWidth": {
+      "viewport": 375,
+      "document": 375
+    },
+    "viewportReset": true,
+    "screenshots": [
+      "deepika-client-reports-2026-11-13.png",
+      "deepika-withdrawals-2026-11-13.png",
+      "deepika-withdrawals-mobile-2026-11-13.png",
+      "deepika-client-security-2026-11-13.png",
+      "deepika-maya-2026-11-13.png",
+      "deepika-faq-mobile-2026-11-13.png"
+    ]
+  }
+}

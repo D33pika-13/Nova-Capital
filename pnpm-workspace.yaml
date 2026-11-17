@@ -1,0 +1,24 @@
+minimumReleaseAgeExclude:
+  - '@next/env@16.4.6'
+  - '@next/swc-darwin-arm64@16.4.6'
+  - '@next/swc-darwin-x64@16.4.6'
+  - '@next/swc-linux-arm64-gnu@16.4.6'
+  - '@next/swc-linux-arm64-musl@16.4.6'
+  - '@next/swc-linux-x64-gnu@16.4.6'
+  - '@next/swc-linux-x64-musl@16.4.6'
+  - '@next/swc-win32-arm64-msvc@16.4.6'
+  - '@next/swc-win32-x64-msvc@16.4.6'
+  - next@16.4.6
+  - '@next/eslint-plugin-next@16.4.6'
+  - eslint-config-next@16.4.6
+  - nodemailer@10.5.0
+
+overrides:
+  minimatch@10.2.6: ^11.0.1
+  # Patch the preview exporter logs dependency; keep its SDK 2.x API peer range.
+  '@opentelemetry/sdk-logs@0.200.0>@opentelemetry/core': 2.12.1
+  '@opentelemetry/sdk-logs@0.200.0>@opentelemetry/resources': 2.12.1
+  '@azure/monitor-opentelemetry-exporter>@opentelemetry/api': 1.9.0
+
+patchedDependencies:
+  next@16.4.6: patches/next@16.4.6.patch

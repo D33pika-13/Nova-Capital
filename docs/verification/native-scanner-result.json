@@ -1,0 +1,50 @@
+{
+  "checkedAt": "2026-11-11T04:36:13.148732+00:00",
+  "engine": "ClamAV 1.5.4, macOS ARM64",
+  "toolProvenance": {
+    "source": "https://www.clamav.net/downloads/production/clamav-1.5.4.macos.universal.pkg",
+    "originalPackageSha256": "df7fa753e2f9f67f3bc99b2a40a3be7ef559088c68ad6bdf66b4b5764e965bd6",
+    "originalInstallerSigner": "Cisco (DE8Y96K9QP), Apple Developer ID Installer; Apple notarization and trusted timestamp verified",
+    "testCopy": "Added temporary library rpath; ad-hoc signed three test executable copies. Original Apple/Cisco-signed package unchanged."
+  },
+  "definitionInputs": {
+    "daily.cvd": {
+      "version": 28179,
+      "signatureCount": 355854,
+      "buildTime": "10 Nov 2026 06-26 +0000"
+    },
+    "main.cvd": {
+      "version": 63,
+      "signatureCount": 3287027,
+      "buildTime": "16 Dec 2025 23-18 +0000"
+    },
+    "bytecode.cvd": {
+      "version": 339,
+      "signatureCount": 80,
+      "buildTime": "11 Sep 2025 08-29 -0400"
+    }
+  },
+  "definitionPreparation": "FreshClam download with TestDatabases yes; vendor CVDCertsDirectory and CVD_CERTS_DIR set to extracted official certificates. All three database load tests passed.",
+  "checksPassed": 5,
+  "scope": [
+    "Clean PDF/PNG streams through actual application adapter",
+    "Harmless EICAR raw and embedded PDF detection",
+    "33 MiB engine file rejection and 65 MiB stream rejection under the shared deployment-source policy",
+    "Six concurrent clean/detected streams retain verdict isolation",
+    "Composed report upload publishes clean bytes and blocks detected PDF before additional object/metadata creation"
+  ],
+  "limits": [
+    "Temporary local daemon with explicit test limits; not the Docker/Azure image",
+    "Synthetic identity and in-memory object storage with PGlite metadata",
+    "Hosted definition freshness monitoring, deployed scanner policy and authenticated browser/storage journeys remain open"
+  ],
+  "cleanup": "Owned daemon, private socket, config and fixture removed. Reviewed input tools/databases preserved.",
+  "policyFile": "infra/scanner/policy.json",
+  "policySha256": "2b311d8fc29ecb3d49c17f0fab42490b1c13daee55888a891204bda992fed044",
+  "policyBounds": {
+    "fileMiB": 32,
+    "scanMiB": 128,
+    "streamMiB": 64,
+    "heuristicAndLimitAlerts": true
+  }
+}

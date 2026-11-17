@@ -1,0 +1,38 @@
+{
+  "url": "https://classics-shoot-white-for.trycloudflare.com",
+  "checks": [
+    {
+      "path": "/api/health",
+      "status": 200
+    },
+    {
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "path": "/api/portal/portfolio",
+      "status": 401
+    }
+  ],
+  "clientLogin": 200,
+  "authenticatedPortfolio": 200,
+  "observedAtUtc": "2026-11-13T15:27:23.672722+00:00",
+  "processManagement": "Per-user session launchd jobs; RunAtLoad true; KeepAlive false; no login autostart",
+  "authCallbacksRotated": true,
+  "credentialsChanged": false,
+  "jobs": {
+    "app": {
+      "state": "running",
+      "pid": 32872
+    },
+    "scanner": {
+      "state": "running",
+      "pid": 32770
+    },
+    "tunnel": {
+      "state": "running",
+      "pid": 32773
+    }
+  },
+  "testerLinkUpdate": "Delivered on WhatsApp to the previously authorized tester; recipient access confirmation pending"
+}

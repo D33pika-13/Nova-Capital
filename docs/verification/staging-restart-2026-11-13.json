@@ -1,0 +1,34 @@
+{
+  "observedAtUtc": "2026-11-13T09:25:00.157526+00:00",
+  "applicationOrigin": "https://hist-governmental-circus-wilson.trycloudflare.com",
+  "supersededOrigin": "https://molecules-pathology-specially-snake.trycloudflare.com",
+  "restoredServices": [
+    "application",
+    "native scanner",
+    "Cloudflare Quick Tunnel"
+  ],
+  "publicChecks": {
+    "health": 200,
+    "login": 200,
+    "anonymousPortfolio": 401
+  },
+  "syntheticClientB": {
+    "login": 200,
+    "authenticatedPortfolio": 200
+  },
+  "scanner": {
+    "version": "1.5.4",
+    "dailyDefinitions": 28182,
+    "officialUpdateDatabaseTestPassed": true
+  },
+  "authConfiguration": {
+    "siteUrlUpdated": true,
+    "exactCallbacks": 2,
+    "retiredCallbacksRemoved": true
+  },
+  "credentialsChanged": false,
+  "sourceChanged": false,
+  "migrationChanged": false,
+  "fullRegressionRerun": false,
+  "scope": "Availability/configuration restoration only; previous release gaps remain."
+}

@@ -1,0 +1,21 @@
+# Native PostgreSQL rehearsal only; not the integrated Supabase storage database.
+name: nova-database-rehearsal
+services:
+  database:
+    image: postgres:17-bookworm@sha256:665dc7b37ac52a17e298511414c21d23ffa4e6a6ef6225b3e5d59c7afb35e994
+    environment:
+      POSTGRES_DB: nova_local
+      POSTGRES_USER: nova_owner
+      POSTGRES_PASSWORD: ${NOVA_LOCAL_DB_PASSWORD:?Set a synthetic local database owner password}
+    volumes:
+      - local-database:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:54329:5432"
+    healthcheck:
+      test: [CMD-SHELL, "pg_isready -U nova_owner -d nova_local"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+    mem_limit: 512m
+volumes:
+  local-database:

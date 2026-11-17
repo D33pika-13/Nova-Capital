@@ -1,0 +1,56 @@
+{
+  "observedAtUtc": "2026-11-13T20:52:46.096Z",
+  "origin": "https://classics-shoot-white-for.trycloudflare.com",
+  "runtime": "24.22.3",
+  "release": "support-di-20261114",
+  "local": {
+    "tests": 961,
+    "files": 80,
+    "format": true,
+    "lint": true,
+    "typecheck": true,
+    "build": true,
+    "packageChecks": true,
+    "browserSecretCanaries": true
+  },
+  "checks": [
+    {
+      "path": "/api/health",
+      "status": 200
+    },
+    {
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "path": "/contact",
+      "status": 200
+    },
+    {
+      "path": "/api/portal/portfolio",
+      "status": 401
+    },
+    {
+      "name": "injected FAQ fallback after bounded support limit; replay stable",
+      "modes": [
+        "faq",
+        "faq",
+        "faq",
+        "faq",
+        "faq",
+        "faq",
+        "faq",
+        "faq",
+        "faq",
+        "faq",
+        "fallback"
+      ]
+    },
+    {
+      "name": "owned synthetic conversation cleared",
+      "status": 404
+    }
+  ],
+  "credentialsChanged": false,
+  "productionDeployed": false
+}

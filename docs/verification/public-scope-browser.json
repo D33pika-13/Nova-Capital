@@ -1,0 +1,44 @@
+{
+  "checkedAt": "2026-11-11T04:43:54.879Z",
+  "profile": "owned loopback public shell, no dependencies or accounts",
+  "publicLayoutChecks": [
+    {
+      "benefitsPreview": "MEMBER BENEFITSMore to explore.View all benefits Member benefits, promotional offers and travel offers, when published. Check eligibility and terms. Benefits are not investment returns or guarantees.No current offers are published.",
+      "desktopNavigation": "flex",
+      "menu": "none",
+      "overflow": false,
+      "width": 1280
+    },
+    {
+      "benefitsPreview": "MEMBER BENEFITSMore to explore.View all benefits Member benefits, promotional offers and travel offers, when published. Check eligibility and terms. Benefits are not investment returns or guarantees.No current offers are published.",
+      "desktopNavigation": "none",
+      "menu": "block",
+      "overflow": false,
+      "width": 900
+    },
+    {
+      "benefitsPreview": "MEMBER BENEFITSMore to explore.View all benefits Member benefits, promotional offers and travel offers, when published. Check eligibility and terms. Benefits are not investment returns or guarantees.No current offers are published.",
+      "desktopNavigation": "none",
+      "menu": "block",
+      "overflow": false,
+      "width": 390
+    }
+  ],
+  "faqCheck": {
+    "answer": "Your funds remain in your own broker account. This website does not collect or custody client investment deposits.",
+    "details": true,
+    "menuClosed": true,
+    "overflow": false,
+    "path": "/faq"
+  },
+  "benefitsCheck": {
+    "empty": true,
+    "overflow": false,
+    "path": "/benefits"
+  },
+  "publicScopeLogs": [],
+  "limits": [
+    "Published offers were tested through service/presentation fixtures, not enabled-provider browser data",
+    "No authenticated or deployed journey"
+  ]
+}

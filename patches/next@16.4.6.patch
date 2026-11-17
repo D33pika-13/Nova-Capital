@@ -1,0 +1,56 @@
+diff --git a/dist/esm/server/lib/start-server.js b/dist/esm/server/lib/start-server.js
+index f57fa31636933b6a0baec792211b48f53e240bc8..a1c8f4b9cdb2f1987dca880bf0807c99a1ee4081 100644
+--- a/dist/esm/server/lib/start-server.js
++++ b/dist/esm/server/lib/start-server.js
+@@ -263,6 +263,23 @@ export async function startServer(serverOptions) {
+                             nextServer == null ? void 0 : nextServer.close().catch(console.error),
+                             cleanupListeners == null ? void 0 : cleanupListeners.runAll().catch(console.error)
+                         ]);
++                        // NOVA: await bounded application resources only after HTTP and after() drain.
++                        const applicationShutdown = globalThis[Symbol.for('nova.server.shutdown')];
++                        if (typeof applicationShutdown === 'function') {
++                            let applicationShutdownTimer;
++                            try {
++                                await Promise.race([
++                                    Promise.resolve().then(()=>applicationShutdown()),
++                                    new Promise((_, reject)=>{
++                                        applicationShutdownTimer = setTimeout(()=>reject(new Error('Application shutdown deadline')), 10000);
++                                    })
++                                ]);
++                            } catch (_) {
++                                console.error('Application shutdown did not complete.');
++                            } finally {
++                                clearTimeout(applicationShutdownTimer);
++                            }
++                        }
+                         // Flush any remaining traces to the trace file on shutdown
+                         flushAllTraces();
+                         // Flush telemetry if this is a dev server
+diff --git a/dist/server/lib/start-server.js b/dist/server/lib/start-server.js
+index 28d75d0798562b04d8c5fef8a8643988f3129032..8afd44fd2594daca2d46ce1f8701614e04653d18 100644
+--- a/dist/server/lib/start-server.js
++++ b/dist/server/lib/start-server.js
+@@ -331,6 +331,23 @@ async function startServer(serverOptions) {
+                             nextServer == null ? void 0 : nextServer.close().catch(console.error),
+                             cleanupListeners == null ? void 0 : cleanupListeners.runAll().catch(console.error)
+                         ]);
++                        // NOVA: await bounded application resources only after HTTP and after() drain.
++                        const applicationShutdown = globalThis[Symbol.for('nova.server.shutdown')];
++                        if (typeof applicationShutdown === 'function') {
++                            let applicationShutdownTimer;
++                            try {
++                                await Promise.race([
++                                    Promise.resolve().then(()=>applicationShutdown()),
++                                    new Promise((_, reject)=>{
++                                        applicationShutdownTimer = setTimeout(()=>reject(new Error('Application shutdown deadline')), 10000);
++                                    })
++                                ]);
++                            } catch (_) {
++                                console.error('Application shutdown did not complete.');
++                            } finally {
++                                clearTimeout(applicationShutdownTimer);
++                            }
++                        }
+                         // Flush any remaining traces to the trace file on shutdown
+                         (0, _trace.flushAllTraces)();
+                         // Flush telemetry if this is a dev server

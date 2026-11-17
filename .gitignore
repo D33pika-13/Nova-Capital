@@ -1,0 +1,28 @@
+node_modules/
+.next/
+out/
+coverage/
+.env*
+!.env.example
+*.tsbuildinfo
+.DS_Store
+playwright-report/
+test-results/
+
+# Private operator material and local evidence are not repository handover assets.
+.env
+*.key
+*.p12
+*.pfx
+*.log
+backups/
+secrets/
+credentials/
+*.credentials.*
+# Screenshots may contain account screens; retain them locally, outside Git history.
+docs/verification/*.png
+docs/verification/*.jpg
+docs/verification/*.jpeg
+docs/verification/*.webp
+docs/qa/*.jpg
+docs/qa/*.png

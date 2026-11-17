@@ -1,0 +1,211 @@
+{
+  "observedAtUtc": "2026-11-13T19:00:51.468Z",
+  "url": "https://classics-shoot-white-for.trycloudflare.com",
+  "profile": "Supabase Free staging / SCHEDULER_PROVIDER=database",
+  "extensionVersion": "1.6.4",
+  "job": {
+    "jobid": 1,
+    "jobname": "nova-maintenance-staging",
+    "schedule": "*/15 * * * *",
+    "active": true,
+    "username": "postgres",
+    "database": "postgres"
+  },
+  "commandSha256": "a2219e155d770a61bd9b51493593c99b274c53c300cadcafca8b5169f40a17f6",
+  "operationSha256": "f6b5cb987a5ab820b66a2c7ec09bad685a7c85ae32a54d8f5172818d003c3d49",
+  "verificationInstalledAtUtc": "2026-11-13T18:54:19.055Z",
+  "normalCadenceInstalledAtUtc": "2026-11-13T18:57:04.738Z",
+  "normalCadenceExecutionObserved": true,
+  "executions": [
+    {
+      "runid": 1,
+      "status": "failed",
+      "start_time": "2026-11-13 18:47:00.094708+00",
+      "end_time": "2026-11-13 18:47:00.103271+00"
+    },
+    {
+      "runid": 2,
+      "status": "failed",
+      "start_time": "2026-11-13 18:48:00.038705+00",
+      "end_time": "2026-11-13 18:48:00.048391+00"
+    },
+    {
+      "runid": 3,
+      "status": "failed",
+      "start_time": "2026-11-13 18:49:00.016138+00",
+      "end_time": "2026-11-13 18:49:00.022583+00"
+    },
+    {
+      "runid": 4,
+      "status": "failed",
+      "start_time": "2026-11-13 18:50:00.053198+00",
+      "end_time": "2026-11-13 18:50:00.064428+00"
+    },
+    {
+      "runid": 5,
+      "status": "failed",
+      "start_time": "2026-11-13 18:51:00.017166+00",
+      "end_time": "2026-11-13 18:51:00.026124+00"
+    },
+    {
+      "runid": 6,
+      "status": "succeeded",
+      "start_time": "2026-11-13 18:53:00.053982+00",
+      "end_time": "2026-11-13 18:53:00.087656+00"
+    },
+    {
+      "runid": 7,
+      "status": "succeeded",
+      "start_time": "2026-11-13 18:54:00.021552+00",
+      "end_time": "2026-11-13 18:54:00.04782+00",
+      "return_message": "1 row"
+    },
+    {
+      "runid": 8,
+      "status": "succeeded",
+      "start_time": "2026-11-13 18:55:00.026316+00",
+      "end_time": "2026-11-13 18:55:00.051923+00",
+      "return_message": "1 row"
+    },
+    {
+      "runid": 9,
+      "status": "succeeded",
+      "start_time": "2026-11-13 18:56:00.028086+00",
+      "end_time": "2026-11-13 18:56:00.043465+00",
+      "return_message": "1 row"
+    },
+    {
+      "runid": 10,
+      "status": "succeeded",
+      "start_time": "2026-11-13 18:57:00.014807+00",
+      "end_time": "2026-11-13 18:57:00.032604+00",
+      "return_message": "1 row"
+    },
+    {
+      "runid": 11,
+      "status": "succeeded",
+      "start_time": "2026-11-13 19:00:00.036078+00",
+      "end_time": "2026-11-13 19:00:00.058952+00",
+      "return_message": "1 row"
+    }
+  ],
+  "batches": [
+    {
+      "id": 3,
+      "origin": "scheduler",
+      "actor_id": null,
+      "started_at": "2026-11-13 18:53:00.059241+00",
+      "finished_at": "2026-11-13 18:53:00.074426+00",
+      "outcome": "completed",
+      "expired_offers": 0
+    },
+    {
+      "id": 4,
+      "origin": "scheduler",
+      "actor_id": null,
+      "started_at": "2026-11-13 18:54:00.02949+00",
+      "finished_at": "2026-11-13 18:54:00.037524+00",
+      "outcome": "completed",
+      "expired_offers": 0
+    },
+    {
+      "id": 5,
+      "origin": "scheduler",
+      "actor_id": null,
+      "started_at": "2026-11-13 18:55:00.033593+00",
+      "finished_at": "2026-11-13 18:55:00.043333+00",
+      "outcome": "completed",
+      "expired_offers": 1
+    },
+    {
+      "id": 6,
+      "origin": "scheduler",
+      "actor_id": null,
+      "started_at": "2026-11-13 18:56:00.032793+00",
+      "finished_at": "2026-11-13 18:56:00.038548+00",
+      "outcome": "completed",
+      "expired_offers": 0
+    },
+    {
+      "id": 7,
+      "origin": "scheduler",
+      "actor_id": null,
+      "started_at": "2026-11-13 18:57:00.019073+00",
+      "finished_at": "2026-11-13 18:57:00.02482+00",
+      "outcome": "completed",
+      "expired_offers": 0
+    },
+    {
+      "id": 8,
+      "origin": "scheduler",
+      "actor_id": null,
+      "started_at": "2026-11-13 19:00:00.042262+00",
+      "finished_at": "2026-11-13 19:00:00.049319+00",
+      "outcome": "completed",
+      "expired_offers": 0
+    }
+  ],
+  "syntheticExpiry": {
+    "id": "7a247622-5d42-4cca-a6d3-0b772cf10d0a",
+    "status": "expired",
+    "version": 2,
+    "updateAuditCount": 1
+  },
+  "applicationClientCronPrivileges": [
+    {
+      "role": "nova_app",
+      "cron_usage": false
+    },
+    {
+      "role": "anon",
+      "cron_usage": false
+    },
+    {
+      "role": "authenticated",
+      "cron_usage": false
+    },
+    {
+      "role": "service_role",
+      "cron_usage": false
+    }
+  ],
+  "providerOwnerPrivileges": {
+    "usage": true,
+    "schedule": true,
+    "job_select": true,
+    "job_insert": false
+  },
+  "httpSchedulerStatus": 503,
+  "adminStatus": {
+    "observedAt": "2026-11-13T18:58:42.756Z",
+    "recoveryBoundaryAt": null,
+    "lastScheduledSuccessAt": "2026-11-13T18:57:00.024Z",
+    "lastScheduledFinishedAt": "2026-11-13T18:57:00.024Z",
+    "lastScheduledOutcome": "completed",
+    "lastScheduledExpiredOffers": 0,
+    "lastAdminFinishedAt": "2026-11-13T18:27:53.474Z",
+    "state": "current",
+    "staleAfterSeconds": 2700
+  },
+  "localVerification": {
+    "standardTests": 943,
+    "files": 79,
+    "policyTests": "Four synthetic-Cron owner-operation tests; actual extension execution separately recorded above",
+    "productionBuildAndPackageCanaryChecks": true
+  },
+  "screenshot": "database-scheduler-2026-11-14.png",
+  "initialFailures": "Five verification runs stopped before maintenance because the role creator lacked SET membership. The installer also encountered a provider-owned ACL dependency on a repeated extension DDL; self-grants from the earlier installer were removed without CASCADE and the final operation requires the provider to be enabled separately.",
+  "productionDeployed": false,
+  "remainingGates": [
+    "Hosted restore/quarantine with Cron jobs paused and explicitly rearmed",
+    "Sustained load, ongoing scanner image/freshness, monitoring and operator notification",
+    "Remaining contact/AI/Azure and production release acceptance"
+  ],
+  "firstNormalCadenceExecution": {
+    "runid": 11,
+    "status": "succeeded",
+    "start_time": "2026-11-13 19:00:00.036078+00",
+    "end_time": "2026-11-13 19:00:00.058952+00",
+    "return_message": "1 row"
+  }
+}

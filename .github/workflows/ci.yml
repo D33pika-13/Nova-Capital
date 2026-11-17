@@ -1,0 +1,95 @@
+name: Application checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  local-checks:
+    runs-on: ubuntu-latest
+    env:
+      APP_ENV: test
+      SERVICES_ENABLED: "false"
+      NEXT_TELEMETRY_DISABLED: "1"
+      SUPABASE_SERVICE_ROLE_KEY: "ci-canary-only-not-a-real-service-role-key"
+      CONTACT_HASH_SECRET: "ci-contact-hash-canary-not-a-real-secret"
+      OPENAI_API_KEY: "ci-openai-key-canary-not-a-real-secret"
+      ENTRA_CLIENT_SECRET: "ci-entra-client-canary-not-a-real-secret"
+      AZURE_MONITOR_CONNECTION_STRING: "synthetic-monitor-canary-not-a-real-connection"
+      ENTRA_DIRECTORY_CLIENT_SECRET: "ci-entra-directory-canary-not-a-real-secret"
+      ENTRA_MFA_ENCRYPTION_KEYS: '{"canary":"Q0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0NDQ0M"}'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm lint
+      - run: pnpm format:check
+      - run: pnpm typecheck
+      - run: pnpm test
+      - run: pnpm build
+      - run: pnpm check:pdf-package
+      - run: pnpm check:image-package
+      - run: pnpm check:startup-package
+      - run: pnpm check:shutdown-package
+      - run: pnpm check:secrets
+      - run: pnpm audit
+  infrastructure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+      - name: Install verified Bicep compiler
+        run: |
+          curl --fail --location --silent --show-error https://github.com/Azure/bicep/releases/download/v0.49.2/bicep-linux-x64 --output "$RUNNER_TEMP/bicep"
+          echo "0ab9de90c2493f206f8281bae74f9ee2d5ed3605548dab1adf41fef185e1f7c5  $RUNNER_TEMP/bicep" | sha256sum --check
+          chmod +x "$RUNNER_TEMP/bicep"
+      - name: Compile templates and check deployment policies
+        env:
+          BICEP_BIN: ${{ runner.temp }}/bicep
+        run: node scripts/check-infra.mjs
+      - run: node scripts/check-compose.mjs
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+      - run: docker build --tag nova-capital:verify-local .
+      - run: node scripts/check-container.mjs
+  native-database:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 11.25.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .node-version
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Install isolated pinned native test tools without lifecycle scripts
+        run: npm install --prefix "$RUNNER_TEMP/pg-tools" --ignore-scripts --no-audit --no-fund @embedded-postgres/linux-x64@17.11.0-beta.19
+      - name: Build pinned PostgreSQL clients from verified official source
+        env:
+          POSTGRES_CLIENT_MANIFEST: ${{ runner.temp }}/nova-pg-client-tools.json
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes --no-install-recommends build-essential libssl-dev zlib1g-dev bison flex bzip2 perl
+          node scripts/build-postgres-test-clients.mjs
+          node --input-type=module -e 'import {readFileSync,appendFileSync} from "node:fs"; const tools=JSON.parse(readFileSync(process.env.POSTGRES_CLIENT_MANIFEST,"utf8")); appendFileSync(process.env.GITHUB_ENV,"POSTGRES_CLIENT_BIN_DIR="+tools.bin+"\n");'
+      - name: Prepare and verify owned PostgreSQL cluster
+        run: |
+          export POSTGRES_BIN_DIR="$RUNNER_TEMP/pg-tools/node_modules/@embedded-postgres/linux-x64/native/bin"
+          node scripts/prepare-postgres-test-tools.mjs
+          pnpm check:native-database
+          pnpm check:load-native

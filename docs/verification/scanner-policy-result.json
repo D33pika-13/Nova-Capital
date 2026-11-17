@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-11-11T04:36:13.148732+00:00",
+  "policySha256": "2b311d8fc29ecb3d49c17f0fab42490b1c13daee55888a891204bda992fed044",
+  "policy": {
+    "clamd": {
+      "HeuristicAlerts": "yes",
+      "AlertExceedsMax": "yes",
+      "MaxScanSize": "128M",
+      "MaxFileSize": "32M",
+      "StreamMaxLength": "64M",
+      "MaxRecursion": "8",
+      "MaxFiles": "256",
+      "MaxThreads": "2",
+      "MaxQueue": "8",
+      "ConcurrentDatabaseReload": "no",
+      "SelfCheck": "60"
+    },
+    "freshclam": {
+      "TestDatabases": "yes"
+    },
+    "updateChecks": "12"
+  },
+  "pinnedImageSourceReview": {
+    "indexDigest": "sha256:45fe5149fbee5a46509c9848ef20d0c354b7b2323c9369f285939a37cf33422a",
+    "platform": "linux/amd64",
+    "platformManifest": "sha256:2a9be29239aea6c6fe17da9625f3c192f91974e61059d364e293f20277f931a3",
+    "entrypointLayer": "sha256:b90289769b3daa77dffb12f7a381f590106e486e88aee094eb776ab7a4e9e30c",
+    "defaultsLayer": "sha256:ad49e390d0ca3edd9caba6c84afc67db7fb00d9ad4a288e1b8fa54a449cbaf3d",
+    "entrypointSha256": "4034f6d63ee6c1d1ed3686733b5722f4b19055b623c82843927613f4e2f7c641",
+    "evidence": "Registry index, platform manifest, config and selected layer digests verified; actual entrypoint environment handling and one commented/no active default per policy key inspected. No image execution."
+  },
+  "verified": [
+    "Five real ClamAV 1.5.4 engine checks consume this policy",
+    "33 MiB engine file rejection and 65 MiB stream rejection",
+    "Compose rendered environment equals shared policy plus private-bridge binding",
+    "Eight Bicep templates/examples compile with policy import, prefix mapping and Azure loopback binding checks",
+    "905 standard tests and production package checks pass"
+  ],
+  "limits": [
+    "No Docker build/run or live Azure deployment",
+    "Registry entrypoint/default inspection was for linux/amd64; verify every selected runtime platform/image",
+    "Update/reload intent is configured, not ongoing freshness or delivery proof",
+    "Freshness enforcement/monitoring, resource pressure/reload and authenticated storage/browser staging remain open"
+  ]
+}

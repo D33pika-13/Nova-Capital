@@ -1,0 +1,26 @@
+{
+  "observedAtUtc": "2026-11-13T20:32:34.202Z",
+  "unsupportedRuntimeChecks": [
+    {
+      "entry": "scripts/check-runtime.mjs",
+      "actualRuntime": "24.22.1",
+      "exitCode": 1,
+      "securityFloorDenied": true
+    },
+    {
+      "entry": "scripts/start.mjs",
+      "actualRuntime": "24.22.1",
+      "exitCode": 1,
+      "securityFloorDenied": true
+    },
+    {
+      "entry": ".next/standalone/scripts/standalone-entry.mjs",
+      "actualRuntime": "24.22.1",
+      "exitCode": 1,
+      "securityFloorDenied": true
+    }
+  ],
+  "noHttpListenerAfterDenial": true,
+  "patchedRuntimeAccepted": true,
+  "packagedPolicyMatchesSource": true
+}

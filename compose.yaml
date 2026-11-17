@@ -1,0 +1,22 @@
+name: nova-local
+services:
+  web:
+    image: nova-capital:local
+    build: .
+    ports:
+      - "127.0.0.1:3000:3000"
+    environment:
+      APP_ENV: development
+      APP_URL: http://127.0.0.1:3000
+      SERVICES_ENABLED: "false"
+      SECRETS_PROVIDER: env
+      AI_PROVIDER: disabled
+    read_only: true
+    tmpfs:
+      - /tmp:size=128m,mode=1777
+      - /app/.next/cache:size=64m,uid=1000,gid=1000,mode=0700
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 1g
+    cpus: 1
+    init: true

@@ -1,0 +1,33 @@
+{
+  "observedAtUtc": "2026-11-13T20:36:12.037Z",
+  "runtime": "24.22.3",
+  "origin": "https://classics-shoot-white-for.trycloudflare.com",
+  "checks": [
+    {
+      "path": "/api/portal/portfolio",
+      "status": 401
+    },
+    {
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "path": "/contact",
+      "status": 200
+    },
+    {
+      "path": "/api/health",
+      "status": 200
+    },
+    {
+      "path": "/api/admin/clients",
+      "status": 200
+    },
+    {
+      "path": "/api/portal/portfolio",
+      "status": 200
+    }
+  ],
+  "remoteSandboxSmtpTlsAndAuthVerified": true,
+  "emailSent": false
+}

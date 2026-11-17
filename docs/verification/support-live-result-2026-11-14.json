@@ -1,0 +1,173 @@
+{
+  "observedAtUtc": "2026-11-13T19:26:25.503Z",
+  "environment": "staging",
+  "origin": "https://classics-shoot-white-for.trycloudflare.com",
+  "profile": "Supabase/PostgreSQL; AI disabled explicitly FAQ-only",
+  "checks": {
+    "health": 200,
+    "clientALogin": 200,
+    "clientBLogin": 200,
+    "publicBootstrap": {
+      "audience": "public",
+      "mode": "faq",
+      "viewerKey": null
+    },
+    "activeClientBootstrap": "client",
+    "differentVerifiedViewerKeys": true,
+    "faqOnlyProfile": "faq",
+    "adminAudiencePublic": "public",
+    "adminHistoryDenied": 403,
+    "anonymousHistoryDenied": 401,
+    "anonymousChatDenied": 401,
+    "publicReplyStatus": 200,
+    "publicReplyFaqOnly": "faq",
+    "publicNoFinancialFacts": true,
+    "publicNoStore": true,
+    "publicIdentityInjectionDenied": 422,
+    "publicCredentialPatternDenied": 422,
+    "publicCrossOriginDenied": 403,
+    "aTurnAccepted": 200,
+    "aReplyFaqOnly": "faq",
+    "bTurnAccepted": 200,
+    "bReplyFaqOnly": "faq",
+    "distinctClientSessions": true,
+    "ownHistoryRoles": [
+      "user",
+      "assistant"
+    ],
+    "ownHistoryContainsOwnQuestion": "SYNTHETIC support isolation A 2026-11-14. What is my current reported portfolio value?",
+    "datedHistory": true,
+    "otherClientHistoryDenied": 404,
+    "otherClientClearDenied": 404,
+    "otherClientAppendDenied": 404,
+    "otherSessionNotListed": true,
+    "callerRoleIdentityDenied": 422,
+    "malformedHistoryIdDenied": 404,
+    "unknownPaginationFieldDenied": 422,
+    "exactReplaySameResult": {
+      "reply": {
+        "mode": "faq",
+        "text": "FAQ-only support. Personalized AI answers are unavailable in this environment.\n\nUse the contact form to ask the configured support team about services, account access or reports. Submission and email-service acceptance are distinct from inbox delivery or a human response.",
+        "links": [
+          {
+            "href": "/contact",
+            "label": "Contact support"
+          }
+        ],
+        "topics": [
+          "support"
+        ],
+        "currency": null
+      },
+      "createdAt": "2026-11-13T19:26:06.603Z",
+      "requestId": "56a469ec-cdd2-4b96-a93b-0cea995ea0af",
+      "sessionId": "2d085a2c-bd09-4507-9713-a8fb4aff960a"
+    },
+    "changedPayloadConflict": 409,
+    "noDuplicateHistory": 2,
+    "newChatAccepted": 200,
+    "newChatKeepsPrevious": true,
+    "concurrentClaimOutcomesSafe": true,
+    "concurrentOneCompletedTurn": true,
+    "writeAndOtherClientRefused": [
+      "refuse"
+    ],
+    "noDuplicateConcurrentHistory": 4,
+    "historyCrossOriginClearDenied": 403
+  },
+  "ownedSyntheticSessions": {
+    "a": "2d085a2c-bd09-4507-9713-a8fb4aff960a",
+    "b": "d8729363-1062-415a-aed3-06321cc96c79",
+    "next": "94e616b2-9199-4712-8e58-5b515203c978"
+  },
+  "limitations": [
+    "AI is explicitly disabled: live model compatibility, financial topic dispatch under actual inference, refusals/timeout and paid-provider privacy review remain unverified",
+    "Hosted auth suspension/expiration mid-inference, broader pagination/history bounds and operational recovery remain separate gates"
+  ],
+  "nativeHostedClearRace": {
+    "observedAtUtc": "2026-11-13T19:28:45.910Z",
+    "runtimeRole": "nova_app",
+    "verifiedTls": true,
+    "actualBlockingObserved": true,
+    "lateFinishSqlState": "P0002",
+    "cancelledLedgerResultNull": true,
+    "messagesRemaining": 0,
+    "oneStatusOnlyClearAudit": true,
+    "fixtureSessionId": "16c2d7e7-eeac-4d3c-a0d3-476733cbc6f5"
+  },
+  "publicSharedLimiter": {
+    "observedAtUtc": "2026-11-13T19:30:16.209Z",
+    "requests": 11,
+    "statuses": [
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      200,
+      429
+    ],
+    "elapsedMs": 6168,
+    "safe429Code": "RATE_LIMITED",
+    "noStore": true
+  },
+  "finalization": {
+    "observedAtUtc": "2026-11-13T19:30:53.581Z",
+    "checks": {
+      "browserClearedOriginalHistoryDenied": 404,
+      "clearedReplayDenied": 409,
+      "clearedReplayNotPending": "CHAT_UNAVAILABLE",
+      "clearedConversationNotListed": true,
+      "ownNextFixtureClear": 200,
+      "repeatClearIdempotent": 200,
+      "ownBFixtureClear": 200,
+      "allOwnedApiLedgersCancelled": true,
+      "ownedApiMessagesRemoved": 0,
+      "oneClearAuditPerOwnedApiSession": 3,
+      "statusOnlyClearAudits": true,
+      "privateLedgerDirectReadDenied": true,
+      "noFinancialWritesDuringSupportTests": 0
+    }
+  },
+  "browser": {
+    "publicFaqReportAnswerObserved": true,
+    "clientAStoredHistoryResumed": true,
+    "previousConversationSelected": true,
+    "browserTurnAcceptedAndPersisted": true,
+    "closeReopenResumedOwnConversation": true,
+    "ownedBrowserSessionCleared": true,
+    "browserFixtureSessionId": "68155d2c-980e-4419-acc3-9cbbba5e9530",
+    "clearedContentRemovedAndLedgerNull": true,
+    "mobile": {
+      "width": 390,
+      "scrollWidth": 390,
+      "panel": {
+        "left": 16,
+        "right": 374,
+        "top": 84,
+        "bottom": 764
+      }
+    },
+    "escapeClosesDialogAndReturnsFocusToMaya": true,
+    "accountSwitchVerification": {
+      "clientALogoutReturnedToLogin": true,
+      "clientBLoginObserved": true,
+      "clientBConversationOptions": [
+        "New chat"
+      ],
+      "clientBTranscriptContainsNoClientAHistory": true,
+      "consoleWarningsOrErrorsObserved": 0
+    }
+  },
+  "localCheckpoint": {
+    "sourceChangedDuringThisVerification": false,
+    "precedingStandardTestsPassed": 943,
+    "precedingTestFiles": 79,
+    "freshFullSuiteRunClaimed": false
+  },
+  "completedAtUtc": "2026-11-13T19:33:46.547717+00:00"
+}

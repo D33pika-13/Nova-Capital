@@ -1,0 +1,80 @@
+{
+  "checkedAt": "2026-11-11T03:55:37.833Z",
+  "environment": "owned loopback public shell; SERVICES_ENABLED=false; no real accounts or cloud calls",
+  "mobileViewport": {
+    "width": 390,
+    "height": 844
+  },
+  "desktopViewport": {
+    "height": 720,
+    "width": 1280
+  },
+  "mobileChecks": [
+    {
+      "h1": "A considered approach. A clearer relationship.",
+      "menuOpen": false,
+      "overflow": false,
+      "path": "/about"
+    },
+    {
+      "h1": "Understand the process. See the details.",
+      "menuOpen": false,
+      "overflow": false,
+      "path": "/services"
+    },
+    {
+      "h1": "Different markets. Informed perspective.",
+      "menuOpen": false,
+      "overflow": false,
+      "path": "/markets"
+    },
+    {
+      "h1": "More to explore, when available.",
+      "menuOpen": false,
+      "overflow": false,
+      "path": "/benefits"
+    },
+    {
+      "h1": "Start with a conversation.",
+      "menuOpen": false,
+      "overflow": false,
+      "path": "/contact"
+    }
+  ],
+  "menuCheck": {
+    "focus": "SUMMARY",
+    "focusText": "Menu",
+    "menuOpen": false
+  },
+  "supportCheck": {
+    "focusId": "support-message",
+    "overflow": false,
+    "transcript": "YouWhere are my funds held?11 Nov 2026, 03:54 UTCSupportFAQ-only support. Personalized AI answers are unavailable in this environment.\n\nYour funds remain in your own broker account. This website does not collect or custody client investment deposits.11 Nov 2026, 03:54 UTC"
+  },
+  "legalChecks": [
+    {
+      "h1": "Privacy policy",
+      "overflow": false,
+      "path": "/legal/privacy",
+      "reviewRequired": true
+    },
+    {
+      "h1": "Terms and conditions",
+      "overflow": false,
+      "path": "/legal/terms",
+      "reviewRequired": true
+    },
+    {
+      "h1": "Risk disclosure",
+      "overflow": false,
+      "path": "/legal/risk",
+      "reviewRequired": true
+    }
+  ],
+  "consoleWarningsAndErrors": [],
+  "limits": [
+    "No authenticated client/admin journey",
+    "No enabled contact mail or real identity/storage/scanner/model integration",
+    "Support focus was verified after a successful local FAQ reply; delayed external-provider interactions were not exercised"
+  ]
+}

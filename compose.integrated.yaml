@@ -1,0 +1,53 @@
+# Use with the base compose.yaml and an ignored .env.integration file.
+# This file does not create a Supabase Auth/Storage stack or migrate/seed data.
+services:
+  web:
+    env_file:
+      - path: .env.integration
+        required: true
+    environment:
+      APP_ENV: development
+      APP_URL: http://127.0.0.1:3000
+      SERVICES_ENABLED: "true"
+      DATABASE_TLS_MODE: disable
+      SECRETS_PROVIDER: env
+      SMTP_HOST: mail
+      SMTP_PORT: "1025"
+      SMTP_ALLOW_INSECURE_LOCAL: "true"
+      CLAMAV_HOST: scanner
+      CLAMAV_PORT: "3310"
+    depends_on:
+      mail:
+        condition: service_started
+      scanner:
+        condition: service_healthy
+  mail:
+    image: axllent/mailpit:latest@sha256:aef2aacc11f075ec0fb6874275ee4a421e688e11a96ebb296134d1735c7761ce
+    ports:
+      - "127.0.0.1:8025:8025"
+      - "127.0.0.1:1025:1025"
+    mem_limit: 128m
+  scanner:
+    image: clamav/clamav:stable@sha256:45fe5149fbee5a46509c9848ef20d0c354b7b2323c9369f285939a37cf33422a
+    environment:
+      CLAMD_CONF_HeuristicAlerts: "yes"
+      CLAMD_CONF_AlertExceedsMax: "yes"
+      CLAMD_CONF_MaxScanSize: "128M"
+      CLAMD_CONF_MaxFileSize: "32M"
+      CLAMD_CONF_StreamMaxLength: "64M"
+      CLAMD_CONF_MaxRecursion: "8"
+      CLAMD_CONF_MaxFiles: "256"
+      CLAMD_CONF_MaxThreads: "2"
+      CLAMD_CONF_MaxQueue: "8"
+      CLAMD_CONF_ConcurrentDatabaseReload: "no"
+      CLAMD_CONF_SelfCheck: "60"
+      FRESHCLAM_CONF_TestDatabases: "yes"
+      FRESHCLAM_CHECKS: "12"
+      CLAMD_CONF_TCPAddr: "0.0.0.0"
+    # No host port: the unauthenticated scan protocol stays on the private network.
+    volumes:
+      - local-scan-definitions:/var/lib/clamav
+    mem_limit: 4g
+    cpus: 2
+volumes:
+  local-scan-definitions:

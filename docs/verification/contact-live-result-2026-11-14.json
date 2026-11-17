@@ -1,0 +1,111 @@
+{
+  "observedAtUtc": "2026-11-13T19:21:14.188Z",
+  "environment": "staging",
+  "origin": "https://classics-shoot-white-for.trycloudflare.com",
+  "browserReference": "75fe6d66-cfff-4f7c-b6e0-3e386bee2005",
+  "results": [
+    {
+      "label": "accepted browser submission replay",
+      "status": 200,
+      "code": "accepted"
+    },
+    {
+      "label": "changed payload under existing request ID denied",
+      "status": 409,
+      "code": "REQUEST_CONFLICT"
+    },
+    {
+      "label": "missing consent denied",
+      "status": 422,
+      "code": "INVALID_INPUT"
+    },
+    {
+      "label": "bot trap denied",
+      "status": 422,
+      "code": "INVALID_INPUT"
+    },
+    {
+      "label": "caller recipient denied",
+      "status": 422,
+      "code": "INVALID_INPUT"
+    },
+    {
+      "label": "header injection denied",
+      "status": 422,
+      "code": "INVALID_INPUT"
+    },
+    {
+      "label": "cross-origin denied",
+      "status": 403,
+      "code": "ORIGIN_DENIED"
+    },
+    {
+      "label": "invalid JSON denied",
+      "status": 400,
+      "code": "INVALID_INPUT"
+    },
+    {
+      "label": "oversize body denied",
+      "status": 413,
+      "code": "TOO_LARGE"
+    },
+    {
+      "label": "concurrent accepted replay 0",
+      "status": 200,
+      "code": "accepted"
+    },
+    {
+      "label": "concurrent accepted replay 1",
+      "status": 200,
+      "code": "accepted"
+    },
+    {
+      "label": "concurrent accepted replay 2",
+      "status": 200,
+      "code": "accepted"
+    },
+    {
+      "label": "one private ledger row and two status-only audits; no personal-data columns; direct reads denied",
+      "status": "passed"
+    },
+    {
+      "label": "hosted replay with spoofed X-Real-IP/X-Forwarded-For created no spoof-address limiter bucket",
+      "status": "passed"
+    }
+  ],
+  "mailbox": {
+    "provider": "Mailtrap Sandbox",
+    "receiptObservedInBrowser": true,
+    "messageId": "5812895538",
+    "recipient": "contact-capture@nova-staging.example.test",
+    "sender": "staging@example.test",
+    "realExternalDeliveryVerified": false
+  },
+  "limits": {
+    "liveNewSendQuotaNotExhausted": true,
+    "localSharedLimitTests": "contact.test.ts"
+  },
+  "limitations": [
+    "Temporary owned Mac/tunnel trusted ingress, not hosted production",
+    "Real company sender/recipient and approved legal content remain pending"
+  ],
+  "edgeProbe": {
+    "reservedCloudflareHeader": "three requests supplying CF-Connecting-IP were denied by edge with HTTP 403 HTML; not counted as app assertions"
+  },
+  "browser": {
+    "desktopSubmissionAccepted": true,
+    "mobileWidth": 390,
+    "mobileScrollWidth": 390,
+    "emptySubmissionFocused": "name",
+    "invalidFields": [
+      "name",
+      "email",
+      "message",
+      "consent"
+    ],
+    "mailboxReplyToVerified": true,
+    "singleContactMessageAfterReplays": true,
+    "existingAdminMfaSessionPreserved": true,
+    "schedulerCompletionObservedUtc": "2026-11-13T19:15:00.111Z"
+  }
+}

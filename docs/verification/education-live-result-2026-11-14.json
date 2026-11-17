@@ -1,0 +1,132 @@
+{
+  "observedAtUtc": "2026-11-14T16:37:15.591Z",
+  "origin": "https://coverage-textbook-recognize-sms.trycloudflare.com",
+  "localTests": 988,
+  "checks": {
+    "health": 200,
+    "educationPage": 200,
+    "twoServiceLinks": true,
+    "educationNavigation": true,
+    "webinarsPreselectedPublicForm": true,
+    "mentorshipPreselectedPublicForm": true,
+    "anonymousAdminDenied": 401,
+    "adminSignIn": "/mfa",
+    "aal1AdminDenied": 403,
+    "adminMfa": "/admin",
+    "clientALogin": 200,
+    "clientAAdminDenied": 403,
+    "clientBLogin": 200,
+    "clientBAdminDenied": 403,
+    "foreignOriginDenied": 403,
+    "invalidPhone": 422,
+    "spoofedRole": 422,
+    "missingConsent": 422,
+    "botTrap": 422,
+    "concurrentGuestSubmissions": [
+      200,
+      200
+    ],
+    "exactConcurrentResponse": {
+      "reference": "79d6153d-d2ca-484e-8248-246fa2274f86",
+      "status": "received",
+      "message": "Thank you for your interest! Our team has received your request and will contact you shortly."
+    },
+    "confirmationAfterCommit": "Thank you for your interest! Our team has received your request and will contact you shortly.",
+    "publicResponseNoPersonalData": [
+      "message",
+      "reference",
+      "status"
+    ],
+    "publicNoStore": true,
+    "replayStable": {
+      "reference": "79d6153d-d2ca-484e-8248-246fa2274f86",
+      "status": "received",
+      "message": "Thank you for your interest! Our team has received your request and will contact you shortly."
+    },
+    "changedPayloadConflict": 409,
+    "registeredClientSubmission": 200,
+    "adminList": 200,
+    "adminNoStore": true,
+    "adminFieldsStored": {
+      "id": "79d6153d-d2ca-484e-8248-246fa2274f86",
+      "name": "SYNTHETIC Education API Guest",
+      "email": "education-guest-659e3202-8332-47a2-9679-1dd34d7901aa@example.test",
+      "phone": "+44 7700 900123",
+      "service": "webinars",
+      "message": "SYNTHETIC test enquiry only. Please do not contact.",
+      "createdAt": "2026-11-14T16:37:03.071614Z"
+    },
+    "serviceFilter": true,
+    "emptyPage": [],
+    "invalidQueryDenied": 422,
+    "publicListingAbsent": 405,
+    "adminPageShowsRequest": true,
+    "markedReturnParagraphRemoved": true,
+    "internationalChartChoices": true,
+    "removedFaqPrompts": true,
+    "mayaName": true,
+    "adminReportMismatch": true,
+    "clientSecurityPage": 200,
+    "withdrawalHistory": 200,
+    "durableRowsAndConsent": true,
+    "oneAuditPerRequest": 2,
+    "auditExcludesPersonalData": true,
+    "providerRolesNoRead": true,
+    "anonymousRuntimeRls": [],
+    "migrationRecorded": 1
+  },
+  "fixtures": [
+    "79d6153d-d2ca-484e-8248-246fa2274f86",
+    "5767e943-d825-436f-9f38-291af075181e"
+  ],
+  "syntheticRequestsRetainedForAdminReview": true,
+  "outboundMessagesSent": false,
+  "productionDeployed": false,
+  "browser": {
+    "guestReference": "0dbc4b22-94d4-4347-98db-34c694c8f246",
+    "clientReference": "0a317f1e-e2b3-4d4d-a9e5-b43f56d6bf54",
+    "bothDurablyStored": true,
+    "desktopGuestWebinarConfirmation": true,
+    "mobileClientMentorshipConfirmation": true,
+    "mobileWidth": 390,
+    "mobileScrollWidth": 390,
+    "emptyFormFocus": "name",
+    "selectedServicesMatchCards": true,
+    "internationalEmptyStates": [
+      "USD",
+      "EUR",
+      "GBP"
+    ],
+    "markedParagraphAbsentAfterFinalReload": true,
+    "latestRecordDateRetained": true,
+    "adminMfaSignIn": true,
+    "adminInboxShowsBothBrowserRequests": true,
+    "adminFilterWebinarsOnly": true,
+    "literalScriptTextEscaped": true,
+    "adminMobileWidth": 390,
+    "adminMobileScrollWidth": 390,
+    "temporaryViewportReset": true,
+    "freshEducationAndAdminConsoleErrors": 0,
+    "earlierTabRecoverableHydrationErrorObserved": true
+  },
+  "release": "education-final-20261114",
+  "localTestFiles": 83,
+  "localChecks": {
+    "lint": true,
+    "types": true,
+    "format": true,
+    "productionBuild": true,
+    "standalonePdfImageStartupShutdown": true,
+    "browserSecretCanaries": true
+  },
+  "migration": "20261114000100_education_requests.sql",
+  "migrationSha256": "514cc5a2cb3bec2db22aa20a06f043affa51856c34610cd3e37b2fbdf11299a7",
+  "previousOriginExpired": true,
+  "authCallbacksRotated": true,
+  "limitations": [
+    "One recoverable React hydration error was observed in the long-lived tab spanning the rebuild; fresh Education and admin loads showed no errors/warnings.",
+    "Synthetic staging only; no production deployment or new outbound communication.",
+    "Requests are stored for manual admin follow-up; no automatic email, WhatsApp, booking or payment.",
+    "Temporary Mac-dependent tunnel may expire or change; company/legal/retention production review remains separate."
+  ]
+}

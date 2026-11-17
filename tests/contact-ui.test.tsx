@@ -1,0 +1,20 @@
+import { renderToStaticMarkup } from "react-dom/server";
+import { it, expect } from "vitest";
+import { ContactForm } from "@/components/contact-form";
+it("clearly disables unconfigured contact and labels native validation, privacy permission and the bot trap", () => {
+  const unavailable = renderToStaticMarkup(<ContactForm enabled={false} />);
+  expect(unavailable).toContain("No message will be sent");
+  expect(unavailable).toContain('<fieldset disabled=""');
+  const enabled = renderToStaticMarkup(<ContactForm enabled />);
+  expect(enabled).not.toContain('<fieldset disabled=""');
+  expect(enabled).toContain("Your name");
+  expect(enabled).toContain("Email for a reply");
+  expect(enabled).toContain('type="email"');
+  expect(enabled).toContain('minLength="10"');
+  expect(enabled).toContain('maxLength="5000"');
+  expect(enabled).toContain('href="/legal/privacy"');
+  expect(enabled).toContain('name="consent"');
+  expect(enabled).toContain('aria-hidden="true"');
+  expect(enabled).toContain('tabindex="-1"');
+  expect(enabled).not.toContain("CONTACT_HASH_SECRET");
+});

@@ -1,0 +1,78 @@
+{
+  "observedAtUtc": "2026-11-13T20:38:44.729383+00:00",
+  "packageAudit": {
+    "production": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "dependencies": 186,
+      "devDependencies": 0,
+      "optionalDependencies": 76,
+      "totalDependencies": 262
+    },
+    "allDependencies": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0
+      },
+      "dependencies": 226,
+      "devDependencies": 374,
+      "optionalDependencies": 96,
+      "totalDependencies": 636
+    },
+    "knownAdvisories": 0,
+    "scope": "npm advisory database for unchanged installed dependency graph; not a full security assessment"
+  },
+  "runtime": {
+    "version": "24.22.3",
+    "source": "https://nodejs.org/dist/v24.22.3/node-v24.22.3-darwin-arm64.tar.xz",
+    "archiveSha256": "1d64136c8a43d648d1b3bad10797a4c995b1ca032d2bde8799de43b37f058fe5",
+    "binarySha256": "ba7073582822078d8c90bca3facacc46690bc5366fab4b815aeef9148cd6e854"
+  },
+  "container": {
+    "tag": "24.22.3-bookworm-slim",
+    "indexDigest": "sha256:dc26ae92c9fb15cf6b1d63e20f0944b2efe0f115b20e00be48fb23fceb061c54",
+    "manifestVerified": true,
+    "imageBuiltOrRun": false
+  },
+  "local": {
+    "node": "24.22.3",
+    "pnpm": "11.25.0",
+    "tests": 958,
+    "files": 80,
+    "lint": true,
+    "typecheck": true,
+    "format": true,
+    "build": true,
+    "pdfImageStartupShutdownPackageChecks": true,
+    "browserSecretCanaries": true
+  },
+  "staging": {
+    "node": "24.22.3",
+    "release": "node-security-20261114",
+    "publicOriginUnchanged": true,
+    "httpAuthDatabaseSmokeChecks": 6,
+    "remoteSandboxSmtpTlsAndAuthVerified": true,
+    "emailSent": false
+  },
+  "managedDatabase": {
+    "observedPostgres": "17.11.0.018",
+    "offeredProviderBuild": "17.11.0.019",
+    "upstreamSecurityRelease": "17.12",
+    "upgradeExecuted": false,
+    "upstreamSecurityFixCoverageVerified": false
+  },
+  "references": [
+    "https://nodejs.org/en/blog/vulnerability/november-2026-security-releases",
+    "https://www.postgresql.org/docs/17/release-17-12.html",
+    "https://supabase.com/docs/guides/platform/upgrading"
+  ],
+  "productionDeployed": false
+}

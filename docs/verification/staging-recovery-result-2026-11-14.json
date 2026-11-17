@@ -1,0 +1,265 @@
+{
+  "capture": {
+    "capturedAtUtc": "2026-11-13T20:07:13.985Z",
+    "id": "1ba7417a-20ed-457b-96b9-c9e8c9c8425f",
+    "sourceProjectRef": "zdzbyzomxmhgearjjfbe",
+    "sourceVersion": "17.11",
+    "sourceDatabase": "postgres",
+    "schemas": [
+      "public",
+      "private",
+      "supabase_migrations"
+    ],
+    "tableCount": 33,
+    "tableRows": 306,
+    "policies": 39,
+    "functions": 63,
+    "archiveSha256": "b96036d975e5f43c33a901f971378c0f24ba169589cd8c1cfcd25e3015dd705b",
+    "archiveBytes": 299134,
+    "objects": [
+      {
+        "sha256": "183e5b3d9a087cb027ec17a7c9f45a2691c777f4cdc17d811434be264d7d6c14",
+        "sizeBytes": 1050,
+        "metadataLinked": true
+      },
+      {
+        "sha256": "a9b64dbc4eb0841c8f1c147a679ed6170f66be721c06d0611bd880963ef9a8fe",
+        "sizeBytes": 90,
+        "metadataLinked": true
+      },
+      {
+        "sha256": "a9b64dbc4eb0841c8f1c147a679ed6170f66be721c06d0611bd880963ef9a8fe",
+        "sizeBytes": 90,
+        "metadataLinked": true
+      },
+      {
+        "sha256": "a9b64dbc4eb0841c8f1c147a679ed6170f66be721c06d0611bd880963ef9a8fe",
+        "sizeBytes": 90,
+        "metadataLinked": true
+      }
+    ],
+    "privateBuckets": 2,
+    "encrypted": true,
+    "roundTripVerified": true,
+    "corruptCiphertextDenied": true,
+    "wrongKeyDenied": true,
+    "sourceReadOnly": true,
+    "sourceSchedulerUnchanged": true,
+    "limitations": [
+      "Provider Auth/Storage/cron/vault schemas are excluded",
+      "No globally atomic database/object snapshot or application freeze",
+      "No upstream password/session/MFA or managed-cloud restore inferred"
+    ],
+    "canonicalOrder": "Exact PostgreSQL JSONB row text in UTC, sorted by JavaScript UTF-16 code units",
+    "sourceLocale": {
+      "timezone": "UTC",
+      "encoding": "UTF8",
+      "collation": "en_US.UTF-8"
+    }
+  },
+  "restore": {
+    "completedAtUtc": "2026-11-13T20:12:25.859Z",
+    "target": "owned disposable PostgreSQL 17.11 on loopback; certificate authentication",
+    "checks": {
+      "serverToolVersionMatches": true,
+      "restoreToolVersionMatches": true,
+      "ownedClusterMarker": "nova_recovery_6deabf7ca2e005bbb6d0de82",
+      "ownedDataDirectory": "/private/var/folders/3y/fyvmpg5n7bq8v3vkb0rnklfm0000gn/T/nova-captured-restore-8XlJsk/data",
+      "targetQuarantineRuntimeConnect": false,
+      "actualRuntimeConnectionDeniedDuringQuarantine": "42501",
+      "templateSchemaConflictRollsBack": true,
+      "onlyEmptyOwnedPublicTemplateRemoved": 0,
+      "archiveRestoredWithOneTransaction": true,
+      "rows private.azure_storage_locations": 0,
+      "digest private.azure_storage_locations": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "rows private.chat_requests": 8,
+      "digest private.chat_requests": "ab7cd118dd838ba8a8cba7d943e6565738e4265ffb787ca2a1d64ed79d5b489c",
+      "rows private.contact_requests": 1,
+      "digest private.contact_requests": "f2155a1569a193490cb749bd6f78a1c205614ec0c0025ddc5491a3b13d7b0a35",
+      "rows private.entra_login_transactions": 0,
+      "digest private.entra_login_transactions": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "rows private.entra_mfa_challenges": 0,
+      "digest private.entra_mfa_challenges": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "rows private.entra_mfa_factors": 0,
+      "digest private.entra_mfa_factors": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "rows private.entra_mfa_limits": 0,
+      "digest private.entra_mfa_limits": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "rows private.entra_mfa_recovery": 0,
+      "digest private.entra_mfa_recovery": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "rows private.entra_provisioning": 0,
+      "digest private.entra_provisioning": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "rows private.entra_sessions": 0,
+      "digest private.entra_sessions": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "rows private.maintenance_runs": 12,
+      "digest private.maintenance_runs": "ceb479753e33213882369160621bb929d2debc67623043bda9c8ad15fc7ad01c",
+      "rows private.offer_image_buckets": 1,
+      "digest private.offer_image_buckets": "6a62f182d772f93ea9d8f809a526d70262b1bebe152ceec14307384f477117f3",
+      "rows private.rate_limits": 36,
+      "digest private.rate_limits": "abe335e8cb25b429f3059c248fa5f2a58a5cbd852bda7ebdc41c7602de07c79d",
+      "rows private.report_buckets": 1,
+      "digest private.report_buckets": "2d73cb04ebee9763b5ff6e707aaab9c4e746100274bb283e86fde004cda23f01",
+      "rows public.admin_notes": 1,
+      "digest public.admin_notes": "c933d6d61ae27ff4bc04aea648a829cabb31dbf2b3fc8a34636bc61a70685047",
+      "rows public.announcement_recipients": 3,
+      "digest public.announcement_recipients": "d5ee146b8900f38ce41ef67f06eb8531cf162db87e3d7a09f073c26aaba8da27",
+      "rows public.announcements": 2,
+      "digest public.announcements": "563115aaaadcee8d837f7df5fb525d373bda5f3607f6c8bdb6c69252f14518e7",
+      "rows public.audit_logs": 104,
+      "digest public.audit_logs": "7b2c109abb3a4eda5379f1e2a2a0ab8623bb900a79762ebdc31d34d9997a24c6",
+      "rows public.chat_messages": 2,
+      "digest public.chat_messages": "a42e60fbc2a2f3444fb421e78a36a161e0b599bd13c6fbae3dc9b65f1be857a2",
+      "rows public.chat_sessions": 7,
+      "digest public.chat_sessions": "1ee0e5daecb6080dcc1256292090774057e2951a9ab47b3f10c5c552d0065fb0",
+      "rows public.client_invitations": 2,
+      "digest public.client_invitations": "6aee6cdc794a9dfc68e883c76b7025aa591a62566cc87c61dd61c487e2281c02",
+      "rows public.client_reports": 1,
+      "digest public.client_reports": "29330356f8d438cb29f92ac1ee89542e9f87b5c54b3ef1fdb904a55852367361",
+      "rows public.investment_revisions": 11,
+      "digest public.investment_revisions": "4d19676bc83bd57030ba62cfa0358b01479dc72fd6d438249d6224c94c6adb67",
+      "rows public.investments": 6,
+      "digest public.investments": "0149a8ce89e359b11fbcf92bc23616bec50af2b673359df73f0f38ef4b404afe",
+      "rows public.notifications": 0,
+      "digest public.notifications": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "rows public.offer_images": 3,
+      "digest public.offer_images": "e5a5dc953c38102623341db06308ef49de9ed6b80cd776b17d222f29c452c2fc",
+      "rows public.offers": 3,
+      "digest public.offers": "cf9aee02ca5421671db4380f015c6b70d4e4d130f63fc0c2a5b267010f286f26",
+      "rows public.portfolio_snapshots": 9,
+      "digest public.portfolio_snapshots": "5f7433a8f118c8dc068002b620561de8c7955ebf0cc4057f823de1f1e659cb9e",
+      "rows public.profiles": 5,
+      "digest public.profiles": "d9c73e9d563de1787e03814dddfeeacacd430ede73214b927a7744e09bbabd7e",
+      "rows public.provider_identities": 5,
+      "digest public.provider_identities": "0a504041b7fd3c3a76e4bec511e21620708bb93c98dfeb8f878cc5fcab4aca02",
+      "rows public.withdrawals": 3,
+      "digest public.withdrawals": "214adb673c0a05dd5a028d1884ef6e7168b164b08bc7a2ea12bc30abbe83bf6b",
+      "rows public.write_requests": 62,
+      "digest public.write_requests": "97fe3804c3b836b5eee1f5c6b797334e74c7a78257358f51bfa8dfd526351343",
+      "rows supabase_migrations.schema_migrations": 18,
+      "digest supabase_migrations.schema_migrations": "59ad5c333100d36f9e5230dbf1034307f11f2cb37dac8c58b37150c63a7e493d",
+      "relationOwnersAndRls": {
+        "matched": true,
+        "sha256": "2a124e4c2c4a5bb793ca0bba9f0e46e37bdbf589eee6dcd7cfae17bbc426e8eb",
+        "count": 36
+      },
+      "onlyExactSourcePublicUsageReconciled": true,
+      "namedEffectivePrivilegesIncludingColumns": {
+        "matched": true,
+        "sha256": "3eeb2bd8480c8d4f30c16b3f59edcd21e43f1b962cdd13aad346412d9603382a",
+        "count": 453
+      },
+      "schemaOwners": {
+        "matched": true,
+        "sha256": "8f84cfb7a06ec06c3bf4018f40a540d248d17136ba8b3e7f24a06dbae837816d",
+        "count": 3
+      },
+      "rlsPolicies": {
+        "matched": true,
+        "sha256": "4d2441bab57c7557a88bf0245167add63be4867a315549c829e6be6158df6b55",
+        "count": 39
+      },
+      "functionDefinitionsOwnersDefinersSearchPaths": {
+        "matched": true,
+        "sha256": "12e9c449914bbd32c06ac77f5a2a9f49ee5da8956d234a1cae9a88b448a6b8f8",
+        "count": 63
+      },
+      "columnDefinitionsAndDefaults": {
+        "matched": true,
+        "sha256": "79a590145a8ef634ebf0b539a06343e8945f3090e6bc9cde8977c1164f4ffe77",
+        "count": 264
+      },
+      "triggerDefinitionsAndEnablement": {
+        "matched": true,
+        "sha256": "f9e2452a20af883139f66579ae840259fbcad03a70ebbe4de7f325563de78c76",
+        "count": 33
+      },
+      "indexDefinitions": {
+        "matched": true,
+        "sha256": "23260080d0941af104e20de19d11ead3bc9087ce1e1fdb17a1499fe9cc0acfa9",
+        "count": 84
+      },
+      "constraintCount": 231,
+      "constraintDefinitionsAndFlags": true,
+      "defaultGrants": {
+        "matched": true,
+        "sha256": "042c28f20567b2c05b55eecfa3c3a8fa86f7f28c43e064a60262259af8abaddc",
+        "count": 6
+      },
+      "sequenceDefinitionsAndValues": {
+        "matched": true,
+        "sha256": "d5db9d00fd25cb539f717136cf3cc39efa63fbecfa491507d3c958d2a525ad82",
+        "count": 3
+      },
+      "eighteenAppliedMigrations": 18,
+      "allObjectBytesReconstructed": 4,
+      "oneNewQuarantineAudit": 1,
+      "allPriorAuditsPreserved": "7b2c109abb3a4eda5379f1e2a2a0ab8623bb900a79762ebdc31d34d9997a24c6",
+      "restoredInternalSessionsRevoked": 0,
+      "sourceCronNotRestored": true,
+      "storagePolicyCapabilityFailsClosed": false,
+      "runtimeLeastPrivilege": {
+        "matched": true,
+        "sha256": "cb29382d45a4502a307ebcad2334737e85c81403c643c7e9aaec8b31796d0a4f"
+      },
+      "anonymousRestoredFinancialDataDenied": 0,
+      "restored SYNTHETIC Staging Client A ownership": 0,
+      "restored SYNTHETIC Staging Client B ownership": 0,
+      "privateRestoreReadDenied private.contact_requests": "42501",
+      "privateRestoreReadDenied private.chat_requests": "42501",
+      "privateRestoreReadDenied private.entra_sessions": "42501",
+      "recoveryBoundaryDiscardsPriorSchedulerFreshness": true,
+      "runtimeCannotAssumeOwner": "42501"
+    },
+    "restoredObjectBytes": 1320,
+    "elapsedMs": 2103,
+    "providerAdministratorRolesDisabled": true,
+    "sourceDatabaseMutated": false,
+    "sourceObjectsMutated": false,
+    "limitations": [
+      "No managed-cloud restore, provider Auth or Storage service restore",
+      "Provider administrator superuser/login powers are intentionally not recreated",
+      "Local database locale C is not asserted equivalent to managed service locale",
+      "Scheduler is excluded and never rearmed; source job remains untouched",
+      "No external SMTP/model/identity action or application cutover occurred"
+    ],
+    "notes": [
+      "Initial empty-template public-schema collision was reproduced and rolled back; only the fresh owned empty schema was removed before valid restore",
+      "Initial timezone/collation-dependent JSON ordering was corrected to UTC and fixed code-unit ordering; exact data text is unchanged",
+      "One missing PUBLIC USAGE baseline on the recreated public schema was reconciled only after comparing the exact source grant; all named table/function/schema/column grants then match"
+    ]
+  },
+  "sourcePostcheck": {
+    "observedAtUtc": "2026-11-13T20:15:25.601Z",
+    "job": {
+      "jobname": "nova-maintenance-staging",
+      "schedule": "*/15 * * * *",
+      "active": true
+    },
+    "sourceQuarantineAudits": 0,
+    "currentApplicationBuildId": "C3eV_byVKwfubPOrAhNQU"
+  },
+  "cleanup": {
+    "ownedTemporaryClustersAndDirectoriesRemoved": true,
+    "rawDumpRemoved": true,
+    "sourcePasswordFileRemoved": true,
+    "encryptedBundleMode": "0600",
+    "separateKeyMode": "0600",
+    "privateBackupDirectoryMode": "0700",
+    "backupAndKeyRemainPrivateOnSameMac": true
+  },
+  "operatorProbes": {
+    "persistedPrivately": true,
+    "sourceFilesSha256": {
+      "capture-recovery-bundle.mjs": "8d5d58e56cb9688b71e38014311a79dd3f757a972357dc10f9852a743713ff0a",
+      "restore-recovery-bundle.mjs": "a10722ca9a47b51e3cd2f3601829a6eda519931978a043d52b47423aa793318e",
+      "recovery-source-postcheck.mjs": "bcfddd8c8629873b21e5c192f520df48932f74c8221d95e8942da4c11206080f"
+    },
+    "productionAutomation": false
+  },
+  "completedAtUtc": "2026-11-13T20:18:28.221401+00:00",
+  "codeArtifacts": {
+    "packageJsonSha256": "94ed6d0b2c2464c96cfdb3c68c76e1464757ac69c1dd1ba7a68c830e3ba06986",
+    "lockfileSha256": "a07566699457e1436b2d45add047c0b29f6eec776a882060d41de76798f5f62d",
+    "ownerQuarantineSqlSha256": "87dc60a28960a71a36de0a74cb2d6b718eba9a357b8e67aa5dd5c11859962e7c",
+    "applicationBuildIdMatchesDeployedCopy": true
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "observedAtUtc": "2026-11-13T18:44:12.654Z",
+  "url": "https://classics-shoot-white-for.trycloudflare.com",
+  "checks": {
+    "adminBrowserLoginMfa": true,
+    "offerCreatedThroughBrowser": true,
+    "browserImageUploadPreview": true,
+    "browserImageDimensions": [
+      96,
+      64
+    ],
+    "offerEditedPublishedVisibleThenUnpublished": true,
+    "offerVersion": 4,
+    "announcementCreatedWithSearchedRecipient": true,
+    "announcementEditedPublished": true,
+    "clientApiReadback": true,
+    "announcementArchivedThroughBrowser": true,
+    "syntheticOfferReturnedToDraft": true
+  },
+  "offerId": "135f10c2-2bd7-4966-95ed-b541163ff52f",
+  "announcementId": "218a7077-b77f-4aeb-8989-34a2399c0680",
+  "productionDeployed": false,
+  "screenshots": [
+    "admin-browser-benefit-2026-11-14.png",
+    "admin-browser-announcement-2026-11-14.png",
+    "admin-browser-cleanup-2026-11-14.png"
+  ]
+}

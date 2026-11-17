@@ -1,0 +1,408 @@
+{
+  "observedAtUtc": "2026-11-13T19:38:19.613Z",
+  "origin": "https://classics-shoot-white-for.trycloudflare.com",
+  "profile": "Supabase/PostgreSQL; synthetic MFA client",
+  "checks": {
+    "health": 200,
+    "adminLoginRequiresMfa": "/mfa",
+    "adminMfaVerified": 200,
+    "securityLoginRequiresMfa": "/mfa",
+    "securityMfaVerified": 200,
+    "otherClientLogin": 200,
+    "knownSyntheticProfileId": true,
+    "adminCreatesSyntheticClient": 201,
+    "clientCreateReplayIdempotent": "0eafd9b5-fedc-4f5f-baab-3d81b7324b3d",
+    "clientChangedRequestConflict": 409,
+    "duplicateEmailDenied": 409,
+    "duplicateClientIdDenied": 409,
+    "callerAdminRoleDenied": 422,
+    "clientCannotCreateAdminClients": 403,
+    "anonymousCannotReadAdminClients": 401,
+    "searchExactSyntheticEmail": [
+      "0eafd9b5-fedc-4f5f-baab-3d81b7324b3d"
+    ],
+    "searchClientId": [
+      "0eafd9b5-fedc-4f5f-baab-3d81b7324b3d"
+    ],
+    "searchPaginationUnknownDenied": 422,
+    "concurrentClientEditSingleWinner": [
+      200,
+      409
+    ],
+    "oldProfileTimestampDenied": 409,
+    "adminPrivateNoteCreated": 201,
+    "privateNoteReplayIdempotent": "f4d6a20d-4d4c-43c1-b0f8-1370e188e437",
+    "clientAdminNoteApiDenied": 403,
+    "concurrentInviteCallsSafe": true,
+    "oneInviteAccepted": true,
+    "inviteReplayDoesNotResend": "accepted",
+    "createstocks": 201,
+    "stocksExactPrecision": "110.0002",
+    "createforex": 201,
+    "forexExactPrecision": "110.0002",
+    "createcommodities": 201,
+    "commoditiesExactPrecision": "110.0002",
+    "createcrypto": 201,
+    "cryptoExactPrecision": "110.0002",
+    "investmentReplayIdempotent": "0c4582ad-7b14-438f-bdb8-d259f5112ed7",
+    "investmentChangedKeyConflict": 409,
+    "negativeAmountDenied": 422,
+    "excessPrecisionDenied": 422,
+    "unsupportedCurrencyDenied": 422,
+    "futureReportingDateDenied": 422,
+    "callerRoleDenied": 422,
+    "clientFinancialWriteDenied": 403,
+    "financialCrossOriginDenied": 403,
+    "concurrentInvestmentEditSingleWinner": [
+      200,
+      409
+    ],
+    "investmentVersionIncrement": 2,
+    "investmentEditReplay": {
+      "id": "0c4582ad-7b14-438f-bdb8-d259f5112ed7",
+      "version": 2,
+      "clientId": "b86e20b6-bcc2-4c9b-af7c-4274d4773914",
+      "currency": "USD",
+      "archivedAt": null,
+      "assetClass": "stocks",
+      "reportedAt": "2026-11-12T12:00:00.000Z",
+      "description": "SYNTHETIC Phase 5 stocks 2026-11-14",
+      "reportedValue": "120.0003",
+      "investedAmount": "100.0001",
+      "correctionReason": "SYNTHETIC correction retains the original revision"
+    },
+    "mismatchedClientInvestmentDenied": 409,
+    "investmentCurrencyMutationDenied": 422,
+    "usd1SnapshotCreated": 201,
+    "usd2SnapshotCreated": 201,
+    "usd3SnapshotCreated": 201,
+    "eurZeroSnapshotCreated": 201,
+    "gbpMissingSnapshotCreated": 201,
+    "snapshotCorrectionCreated": 201,
+    "snapshotCorrectionReplay": "b6125a03-c3d3-4145-aee7-df1729856e80",
+    "supersededSnapshotCorrectionDenied": 409,
+    "concurrentSnapshotCorrectionSingleWinner": [
+      201,
+      409
+    ],
+    "correctionDateChangeDenied": 422,
+    "crossCurrencyCorrectionDenied": 409,
+    "crossClientCorrectionDenied": 409,
+    "ownMfaClientPortfolioAvailable": 200,
+    "fourAssetClassesPresent": true,
+    "originalInvestmentRevisionRetained": true,
+    "winningInvestmentRevisionRetained": true,
+    "supersededSnapshotsRetained": true,
+    "latestDatedSnapshotChosen": "1280.0000",
+    "cashFlowBasisProfitLoss": "130.0000",
+    "cashFlowBasisSimpleReturn": "11.3043",
+    "zeroBasisNoPercentage": null,
+    "missingBasisNoInferredProfit": null,
+    "missingBasisNoPercentage": null,
+    "currenciesStaySeparate": [
+      "EUR",
+      "GBP",
+      "USD"
+    ],
+    "noAdminNotesInClientDto": true,
+    "clientBPortfolioUnchanged": {
+      "investments": [],
+      "snapshots": [],
+      "revisions": [],
+      "lastRecordedAt": null,
+      "summaries": [],
+      "allocation": [],
+      "holdingTotals": []
+    },
+    "clientCannotReadAdminPortfolio": 403
+  },
+  "fixtures": {
+    "client": "b86e20b6-bcc2-4c9b-af7c-4274d4773914",
+    "createdClient": "0eafd9b5-fedc-4f5f-baab-3d81b7324b3d",
+    "investments": [
+      "0c4582ad-7b14-438f-bdb8-d259f5112ed7",
+      "d858e0db-954c-45eb-8659-7e7bee7ccbd1",
+      "2b398182-c1f2-4aea-9b83-e93e5154a78c",
+      "11361177-c621-44fd-a737-ffb7e8891641"
+    ],
+    "snapshots": [
+      "4d9238b4-01ec-4320-a912-69d2c9be336b",
+      "3925b2af-de43-4a85-9d39-2db0ca99d947",
+      "9ad5441c-9965-4051-9514-a4e777998eef",
+      "920819c2-5575-42f5-bf68-a546d3af2379",
+      "e337755e-9809-4525-9436-4d9dcbdfb229"
+    ]
+  },
+  "limitations": [
+    "Synthetic fixtures only; no production deployment or real transfers",
+    "Invitation expiry/uncertain-send recovery and external company inbox delivery remain separate gates",
+    "Representative cases do not prove sustained load, complete accessibility, hosted restore or all provider behaviors"
+  ],
+  "finalization": {
+    "observedAtUtc": "2026-11-13T19:43:42.218Z",
+    "checks": {
+      "activeExistingMfaSession": 200,
+      "suspensionBlocksExistingPortfolio": 403,
+      "suspensionBlocksExistingSupport": 403,
+      "suspensionBlocksHistory": 403,
+      "suspendedInvitationDenied": 409,
+      "suspendedStatusSearch": [
+        "b86e20b6-bcc2-4c9b-af7c-4274d4773914"
+      ],
+      "reactivationSameSessionWorks": 200,
+      "deactivationBlocksExistingSession": 403,
+      "deactivatedStatusSearch": [
+        "b86e20b6-bcc2-4c9b-af7c-4274d4773914"
+      ],
+      "finalSameSessionRestored": 200,
+      "stocksArchiveAccepted": 200,
+      "stocksArchiveReplayIdempotent": {
+        "id": "0c4582ad-7b14-438f-bdb8-d259f5112ed7",
+        "version": 3,
+        "clientId": "b86e20b6-bcc2-4c9b-af7c-4274d4773914",
+        "currency": "USD",
+        "archivedAt": "2026-11-13T19:43:26.495Z",
+        "assetClass": "stocks",
+        "reportedAt": "2026-11-12T12:00:00.000Z",
+        "description": "SYNTHETIC Phase 5 stocks 2026-11-14",
+        "reportedValue": "120.0003",
+        "investedAmount": "100.0001",
+        "correctionReason": "SYNTHETIC regression fixture completed; retain all financial history"
+      },
+      "stocksArchivedVersion": 3,
+      "archivedCorrectionDenied": 409,
+      "forexArchiveAccepted": 200,
+      "forexArchiveReplayIdempotent": {
+        "id": "d858e0db-954c-45eb-8659-7e7bee7ccbd1",
+        "version": 2,
+        "clientId": "b86e20b6-bcc2-4c9b-af7c-4274d4773914",
+        "currency": "USD",
+        "archivedAt": "2026-11-13T19:43:29.184Z",
+        "assetClass": "forex",
+        "reportedAt": "2026-11-12T12:00:00.000Z",
+        "description": "SYNTHETIC Phase 5 forex 2026-11-14",
+        "reportedValue": "110.0002",
+        "investedAmount": "100.0001",
+        "correctionReason": "SYNTHETIC regression fixture completed; retain all financial history"
+      },
+      "forexArchivedVersion": 2,
+      "commoditiesArchiveAccepted": 200,
+      "commoditiesArchiveReplayIdempotent": {
+        "id": "2b398182-c1f2-4aea-9b83-e93e5154a78c",
+        "version": 2,
+        "clientId": "b86e20b6-bcc2-4c9b-af7c-4274d4773914",
+        "currency": "USD",
+        "archivedAt": "2026-11-13T19:43:31.247Z",
+        "assetClass": "commodities",
+        "reportedAt": "2026-11-12T12:00:00.000Z",
+        "description": "SYNTHETIC Phase 5 commodities 2026-11-14",
+        "reportedValue": "110.0002",
+        "investedAmount": "100.0001",
+        "correctionReason": "SYNTHETIC regression fixture completed; retain all financial history"
+      },
+      "commoditiesArchivedVersion": 2,
+      "cryptoArchiveAccepted": 200,
+      "cryptoArchiveReplayIdempotent": {
+        "id": "11361177-c621-44fd-a737-ffb7e8891641",
+        "version": 2,
+        "clientId": "b86e20b6-bcc2-4c9b-af7c-4274d4773914",
+        "currency": "USD",
+        "archivedAt": "2026-11-13T19:43:33.574Z",
+        "assetClass": "crypto",
+        "reportedAt": "2026-11-12T12:00:00.000Z",
+        "description": "SYNTHETIC Phase 5 crypto 2026-11-14",
+        "reportedValue": "110.0002",
+        "investedAmount": "100.0001",
+        "correctionReason": "SYNTHETIC regression fixture completed; retain all financial history"
+      },
+      "cryptoArchivedVersion": 2,
+      "archivedHoldingsHistoryRetained": true,
+      "archiveDoesNotAdjustSnapshots": [
+        {
+          "id": "e337755e-9809-4525-9436-4d9dcbdfb229",
+          "clientId": "b86e20b6-bcc2-4c9b-af7c-4274d4773914",
+          "currency": "GBP",
+          "adjustedBasis": null,
+          "reportedValue": "80.0000",
+          "basisExplanation": "SYNTHETIC missing basis; no profit or percentage inferred",
+          "reportedAt": "2026-11-12T12:00:00.000Z",
+          "createdAt": "2026-11-13T19:38:12.433Z",
+          "correctionOf": null,
+          "correctionReason": null,
+          "superseded": false
+        },
+        {
+          "id": "920819c2-5575-42f5-bf68-a546d3af2379",
+          "clientId": "b86e20b6-bcc2-4c9b-af7c-4274d4773914",
+          "currency": "EUR",
+          "adjustedBasis": "0.0000",
+          "reportedValue": "50.0000",
+          "basisExplanation": "SYNTHETIC explicit zero basis; no percentage inferred",
+          "reportedAt": "2026-11-12T12:00:00.000Z",
+          "createdAt": "2026-11-13T19:38:11.714Z",
+          "correctionOf": null,
+          "correctionReason": null,
+          "superseded": false
+        },
+        {
+          "id": "9ad5441c-9965-4051-9514-a4e777998eef",
+          "clientId": "b86e20b6-bcc2-4c9b-af7c-4274d4773914",
+          "currency": "USD",
+          "adjustedBasis": "1150.0000",
+          "reportedValue": "1280.0000",
+          "basisExplanation": "SYNTHETIC basis 1200 minus broker withdrawal 50; entered manually",
+          "reportedAt": "2026-11-12T12:00:00.000Z",
+          "createdAt": "2026-11-13T19:38:11.021Z",
+          "correctionOf": null,
+          "correctionReason": null,
+          "superseded": false
+        },
+        {
+          "id": "d60fb85c-45e6-4300-a49c-cf160e1633cc",
+          "clientId": "b86e20b6-bcc2-4c9b-af7c-4274d4773914",
+          "currency": "USD",
+          "adjustedBasis": "1200.0000",
+          "reportedValue": "1310.0000",
+          "basisExplanation": "SYNTHETIC prior basis 1000 plus contribution 200",
+          "reportedAt": "2026-11-11T12:00:00.000Z",
+          "createdAt": "2026-11-13T19:38:15.149Z",
+          "correctionOf": "3925b2af-de43-4a85-9d39-2db0ca99d947",
+          "correctionReason": "SYNTHETIC competing snapshot correction 0",
+          "superseded": false
+        },
+        {
+          "id": "3925b2af-de43-4a85-9d39-2db0ca99d947",
+          "clientId": "b86e20b6-bcc2-4c9b-af7c-4274d4773914",
+          "currency": "USD",
+          "adjustedBasis": "1200.0000",
+          "reportedValue": "1320.0000",
+          "basisExplanation": "SYNTHETIC prior basis 1000 plus contribution 200",
+          "reportedAt": "2026-11-11T12:00:00.000Z",
+          "createdAt": "2026-11-13T19:38:10.325Z",
+          "correctionOf": null,
+          "correctionReason": null,
+          "superseded": true
+        },
+        {
+          "id": "b6125a03-c3d3-4145-aee7-df1729856e80",
+          "clientId": "b86e20b6-bcc2-4c9b-af7c-4274d4773914",
+          "currency": "USD",
+          "adjustedBasis": "1000.0000",
+          "reportedValue": "1090.0000",
+          "basisExplanation": "SYNTHETIC opening basis 1000; no later cash flows",
+          "reportedAt": "2026-11-10T12:00:00.000Z",
+          "createdAt": "2026-11-13T19:38:13.104Z",
+          "correctionOf": "4d9238b4-01ec-4320-a912-69d2c9be336b",
+          "correctionReason": "SYNTHETIC correction; original retained",
+          "superseded": false
+        },
+        {
+          "id": "4d9238b4-01ec-4320-a912-69d2c9be336b",
+          "clientId": "b86e20b6-bcc2-4c9b-af7c-4274d4773914",
+          "currency": "USD",
+          "adjustedBasis": "1000.0000",
+          "reportedValue": "1100.0000",
+          "basisExplanation": "SYNTHETIC opening basis 1000; no later cash flows",
+          "reportedAt": "2026-11-10T12:00:00.000Z",
+          "createdAt": "2026-11-13T19:38:09.627Z",
+          "correctionOf": null,
+          "correctionReason": null,
+          "superseded": true
+        }
+      ],
+      "archiveRemovesOnlyActiveAllocation": [],
+      "archiveDoesNotCreateWithdrawal": [],
+      "clientBStillUnchanged": {
+        "investments": [],
+        "snapshots": [],
+        "revisions": [],
+        "lastRecordedAt": null,
+        "summaries": [],
+        "allocation": [],
+        "holdingTotals": []
+      },
+      "invitationChangedPurposeConflict": 409,
+      "ownedCreatedFixtureDeactivated": "deactivated",
+      "inactiveInvitationDenied": 409,
+      "oneDurableInvitationAccepted": true,
+      "oneProviderIdentityAttached": 1,
+      "stocksExactRevisionChain": [
+        1,
+        2,
+        3
+      ],
+      "stocksAtomicActorAuditCount": 3,
+      "stocksAuditActorVerified": true,
+      "forexExactRevisionChain": [
+        1,
+        2
+      ],
+      "forexAtomicActorAuditCount": 2,
+      "forexAuditActorVerified": true,
+      "commoditiesExactRevisionChain": [
+        1,
+        2
+      ],
+      "commoditiesAtomicActorAuditCount": 2,
+      "commoditiesAuditActorVerified": true,
+      "cryptoExactRevisionChain": [
+        1,
+        2
+      ],
+      "cryptoAtomicActorAuditCount": 2,
+      "cryptoAuditActorVerified": true,
+      "exactSnapshotAuditCount": 7,
+      "snapshotActorAuditVerified": true,
+      "idempotentClientSingleCreationAudit": 1,
+      "clientCreationAuditActor": "0b6a09b0-c049-4c13-9d56-66aacc45b850",
+      "privateNoteSingleDurableRecord": 1
+    }
+  },
+  "browser": {
+    "dedicatedClientMfaVerified": true,
+    "separateCurrencySummariesObserved": [
+      "GBP",
+      "EUR",
+      "USD"
+    ],
+    "usdLatestValue": "1280.0000",
+    "usdBasis": "1150.0000",
+    "usdProfitLoss": "130.0000",
+    "usdSimpleReturn": "11.3043",
+    "missingBasisShownNotRecorded": true,
+    "zeroBasisPercentageNotCalculable": true,
+    "fourAssetClassesAndExactValuesObserved": true,
+    "effectiveUsdChartPoints": 3,
+    "chartTooltipObserved": {
+      "dateUtc": "2026-11-11T12:00:00.000Z",
+      "value": "1310.0000"
+    },
+    "archivedHoldingsAfterReload": 4,
+    "noActiveHoldingsAfterArchive": true,
+    "profileRestoredActive": true,
+    "mobileVerification": {
+      "browser": "in-app browser",
+      "width": 390,
+      "scrollWidth": 390,
+      "overviewMissingBasisVisible": true,
+      "viewportResetAfterTest": true,
+      "earlierChromeAttempt": "Reported 1800 pixels; not counted as mobile verification"
+    }
+  },
+  "invitationMailbox": {
+    "provider": "Mailtrap Sandbox",
+    "capturedMessageId": "5812933511",
+    "recipient": "client-regression-20261114@nova-staging.example.test",
+    "capturedMessagesForRecipient": 1,
+    "sandboxTotalMessagesObserved": 5,
+    "realExternalDeliveryVerified": false,
+    "tokenOrMessageBodyStoredInEvidence": false
+  },
+  "localCheckpoint": {
+    "applicationSourceChangedInThisIncrement": false,
+    "precedingStandardTestsPassed": 943,
+    "precedingTestFiles": 79,
+    "freshFullSuiteRunClaimed": false
+  },
+  "completedAtUtc": "2026-11-13T19:48:46.449485+00:00"
+}
