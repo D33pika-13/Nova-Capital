@@ -13,6 +13,8 @@ Developed for **Deepika**, who is intended to take over ongoing ownership and ma
 
 Last complete feature checkpoint: **14 November 2026 — 988 tests across 83 files, build/type/lint/format/package checks and selected actual staging/browser journeys passed.** The GitHub handover on 17 November is documentation/source packaging; it is not a new production release or a claim that an old temporary link is still live.
 
+Fresh private GitHub clone checked on **17 November 2026**: frozen-lockfile offline install, production build/type pass, browser-secret canary scan, and five local public-shell/disabled-service HTTP checks passed without real provider credentials. This validates the delivered setup; it does not establish Deepika’s account access or reverify connected providers.
+
 ### How the current system works
 
 ```text

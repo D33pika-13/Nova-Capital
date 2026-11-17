@@ -31,3 +31,7 @@ Initial source commit `b868ded58c999e39d83be833dbdb04d8f7cdcc8b` was pushed to `
 Deepika’s targeted access invitation and repository ownership transfer are pending her verified GitHub identity. Provider ownership and secret delivery are also pending; source publication does not complete them.
 
 The repository/README links and integration handover summary were delivered to Deepika/dipu on WhatsApp on 17 November at 6:27 pm IST. The message explicitly explains that access/transfer are still pending her GitHub identity; no invitation acceptance link has been fabricated.
+
+## Clean source checkout verification — 17 November 2026
+
+Cloned the private repository through the verified developer GitHub account into an isolated temporary directory; Git integrity and the 491-file source tree passed. A frozen-lockfile offline pnpm install completed, the production build/type phase and browser-canary scan passed, and a loopback-only packaged start served Home, login, Education and its preselected webinar form. Protected Education admin services returned 503 as expected for the disabled-provider public-shell profile. The owned test server was shut down. No real Supabase/SMTP credentials or existing staging listeners were used. Evidence: `verification/github-clean-checkout-2026-11-17.json`. This proves source setup with existing developer access, not Deepika’s invitation acceptance or connected-provider operation.

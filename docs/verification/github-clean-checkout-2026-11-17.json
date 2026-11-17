@@ -1,0 +1,35 @@
+{
+  "observedAtUtc": "2026-11-17T13:01:32.456Z",
+  "scope": "fresh clone from private GitHub repository, existing developer GitHub access only",
+  "frozenOfflineInstall": true,
+  "build": true,
+  "publicShellChecks": [
+    {
+      "path": "/",
+      "status": 200
+    },
+    {
+      "path": "/login",
+      "status": 200
+    },
+    {
+      "path": "/education",
+      "status": 200
+    },
+    {
+      "path": "/education/request?service=webinars",
+      "status": 200
+    },
+    {
+      "path": "/api/admin/education",
+      "status": 503
+    }
+  ],
+  "realProviderCredentialsUsed": false,
+  "deepikaAccessVerified": false,
+  "productionDeployed": false,
+  "sourceCommit": "8db6d0c7ab8b1bf7ffdeb16ffc58ebae41c6ec90",
+  "sourceGitFsckPassed": true,
+  "browserCanaryScanPassed": true,
+  "fullFeatureSuiteRerun": false
+}
